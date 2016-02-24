@@ -73,7 +73,8 @@ API地址：https://github.com/shiningwhite/m73_api
         /**
           *对应http response状态码.
           *2xx--正常
-          *4xx--客户端异常
+          *401--没有登陆（跳转到登陆页）
+          *403--没有权限
           *5xx--服务器内部异常
         */
        "statusCode": "200", 
