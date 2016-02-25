@@ -22,8 +22,7 @@ API地址: https://github.com/shiningwhite/m73_api
             + [用户登录](#login)
             + [修改密码](#resetPwd)
         + 审核管理        
-            + [飞小编报名审核](#applyList)   
-            + [飞小编申请搜索条件](#applySearchItem)         
+            + [飞小编报名审核](#applyList)         
             + [删除飞小编申请](#delApply)
             + [搜索飞小编申请列表](#searchApply)            
             + [编辑飞小编申请](#setApply)
@@ -38,19 +37,24 @@ API地址: https://github.com/shiningwhite/m73_api
             + [广告列表](#adList)
             + [编辑广告](#setAd)
             + [新增广告](#addAd)
-            + [搜索广告](searchAd)
-            
         + 权限管理
             + [用户列表](#userList)
             + [新增用户](#addUser)
             + [编辑用户](#setUser)
-            + [搜索用户](#searchUser)
             + [删除用户](#delUser)
             + [角色列表](#roleList)
             + [新增角色](#addRole)
             + [编辑角色](#setRole)
             + [删除角色](#delRole)
             + [权限列表](#permissionList)
+        + 搜索相关
+            + [飞小编搜索条件](#applySearchTerm)
+            + [广告搜索条件](#adSearchTerm)
+            + [用户搜索条件](#userSearchTerm)
+        + 二维码相关
+            + [生成二维码](#generateCode)
+        + 上传相关
+            + [图片上传](#imgUpload)                  
     
 <a name="description"></a>
 ##文档描述
@@ -139,7 +143,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
               page                    Int       页数
               periods                 String    期数
-              applyStatus             String    申请状态
+              applyStatus             Boolean   申请状态
               mailStatus              String    邮件状态
               name                    String    姓名
               qq                      String    qq号
@@ -159,8 +163,8 @@ API地址: https://github.com/shiningwhite/m73_api
                   "special": "小众特色",
                   "applyTime": "报名时间",
                   "from": "来源",
-                  "applyStatus": "状态",
-                  "mailStatus": "邮件状态",  //  发送成功，发送失败，未发送
+                  "applyStatus": "状态",  // true:通过, false: 未通过
+                  "mailStatus": "邮件状态",  //  1:发送成功，2:未发送，0:发送失败
                   "failReason": "失败原因，该字段仅存在于邮件发送失败",
                   "remark": "备注"
               },
@@ -169,29 +173,6 @@ API地址: https://github.com/shiningwhite/m73_api
             "pageTotal": "数量"
         }
  
- <a name="applySearchItem"></a>
-###飞小编申请搜索条件
-#### POST  /applySearchItem
-
-######入参：
-            
-######出参：
-    "result":
-        {
-            "periods": [1,2,3],  // 期数
-            "applyStatus": [{
-              "id": 1,   // 状态Id
-              "status": "全部"   //  全部，通过，拒绝
-             },
-             { ... }
-            ],
-            "mailStatus": [{
-              "id": 1,   // 状态Id
-              "status": "全部"   //  发送成功，发送失败，未发送
-             },
-             { ... }
-            ]
-        }
         
  <a name="delApply"></a>
 ###删除飞小编申请
@@ -213,7 +194,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
             * applyId                 String    申请ID
-              applyStatus             Int       1表示通过， 0表示失败
+              applyStatus             Boolean   状态 true表示通过， false表示失败
               remark                  String    备注
                    
 ######出参：
@@ -234,7 +215,7 @@ API地址: https://github.com/shiningwhite/m73_api
         {
             notice: [{
                "applyId": 1111,
-               "operation":  1 // 1表示修改成功, 0表示修改失败
+               "status":   true // true表示发送成功, false表示发送失败
                "failReason": "发送失败原因,仅当发送失败时给出" 
              },
              { ... }
@@ -261,8 +242,8 @@ API地址: https://github.com/shiningwhite/m73_api
                   "special": "小众特色",
                   "applyTime": "报名时间",
                   "from": "来源",
-                  "applyStatus": "状态",
-                  "mailStatus": "邮件状态",  //  发送成功，发送失败，未发送
+                  "applyStatus": "状态",  // true:通过, false: 未通过
+                  "mailStatus": "邮件状态",  //  1:发送成功，2:未发送，0:发送失败
                   "failReason": "失败原因，该字段仅存在于邮件发送失败",
                   "remark": "备注"
              }
@@ -314,7 +295,7 @@ API地址: https://github.com/shiningwhite/m73_api
                   "code": "数据库字段",
                   "width": "600",
                   "height": "300",
-                  "status": "开启"  // 停用
+                  "status": "开启"  // 停用 true: 开启，false: 停用
                 },
                 { ... }
              ],
@@ -350,4 +331,132 @@ API地址: https://github.com/shiningwhite/m73_api
     "result":
         {
             "operation": 1  //修改成功，否则errorCode提示错误消息
-        }                               
+        } 
+        
+<a name="adList"></a>
+###广告列表
+#### POST  /adList
+
+######入参：
+             adCategory                String  广告分类
+             adTitle                   String  广告标题
+             page                      Int  分页   
+
+######出参：
+    "result":
+        {
+            "ad": [
+              {
+                "id": "广告ID",
+                "pic": "广告图片",
+                "title": "标题",
+                "desc": "描述",
+                "url": "文章地址",
+                "category": "分类",
+                "rank": "顺序",
+                "statistics": "点击数",
+                "status": "状态",  // true表示开启，false表示关闭
+                "startTime": "上线时间",
+                "endTime": "下线时间",
+                "size": "图片尺寸"
+              }, 
+              { ... }
+            ],
+           "pageTotal": "数量"
+        }
+
+<a name="setAd"></a>        
+###编辑广告
+#### POST  /setAd
+
+######入参：
+             * id                      String  广告ID
+             * category                String  广告分类
+               desc                    String  描述
+               rank                    String  排序
+               status                  Boolean  状态 true or false
+               url                     String  链接
+               startTime               String  上线时间
+               endTime                 String  下线时间
+               pic                     String  图片
+               title                   String  广告标题
+                
+
+######出参：
+    "result":
+        {
+          "operation": 1  //修改成功，否则errorCode提示错误消息
+        }          
+        
+<a name="addAd"></a>        
+###新增广告
+#### POST  /setAd
+
+######入参：
+             * category                String  广告分类
+               desc                    String  描述
+               rank                    String  排序
+               status                  Boolean  状态 true or false
+               url                     String  链接
+               startTime               String  上线时间
+               endTime                 String  下线时间
+               pic                     String  图片
+               title                   String  广告标题
+                
+
+######出参：
+    "result":
+        {
+          "operation": 1  //修改成功，否则errorCode提示错误消息
+        } 
+                
+<a name="applySearchTerm"></a>
+###飞小编搜索条件
+#### GET  /searchTerm?type=fxbApply
+
+######入参：
+        * type                      String   条件类型          
+            
+######出参：
+    "result":
+        {
+            "periods": [1,2,3],  // 期数
+            "applyStatus": [{
+              "id": 1,   // 状态Id
+              "status": "全部"   //  全部，通过，拒绝
+             },
+             { ... }
+            ],
+            "mailStatus": [{
+              "id": 1,   // 状态Id
+              "status": "全部"   //  发送成功，发送失败，未发送
+             },
+             { ... }
+            ]
+        }
+        
+<a name="adSearchTerm"></a>
+###广告搜索条件
+#### GET  /searchTerm?type=ad
+
+######入参：
+        * type                      String   条件类型          
+            
+######出参：
+    "result":
+        {
+            "adCategory": ["全部",  "精选目录",  " ... "],  // 广告类别
+        }
+        
+<a name="userSearchTerm"></a>
+###用户搜索条件
+#### GET  /searchTerm?type=user
+
+######入参：
+        * type                      String   条件类型          
+            
+######出参：
+    "result":
+        {
+            "role": ["全部",  "运营",  " ... "],  // 角色
+        }                                                               
