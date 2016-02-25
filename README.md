@@ -717,7 +717,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-            "operation": 1  //y验证成功，否则errorCode提示错误消息
+            "operation": 1  //验证成功，否则errorCode提示错误消息
         }                  
                 
 <a name="applySearchTerm"></a>
