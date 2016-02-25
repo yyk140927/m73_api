@@ -47,14 +47,13 @@ API地址: https://github.com/shiningwhite/m73_api
             + [编辑角色](#setRole)
             + [删除角色](#delRole)
             + [权限列表](#authList)
+            + [验证权限](#verifyAuth)
         + 搜索相关
             + [飞小编搜索条件](#applySearchTerm)
             + [广告搜索条件](#adSearchTerm)
             + [用户搜索条件](#userSearchTerm)
         + 二维码相关
-            + [生成二维码](#generateCode)
-        + 上传相关
-            + [图片上传](#imgUpload)                  
+            + [生成二维码](#generateCode)                 
     
 <a name="description"></a>
 ##文档描述
@@ -295,7 +294,7 @@ API地址: https://github.com/shiningwhite/m73_api
                   "code": "数据库字段",
                   "width": "600",
                   "height": "300",
-                  "status": "开启"  // 停用 true: 开启，false: 停用
+                  "status": true  // 停用 true: 开启，false: 停用
                 },
                 { ... }
              ],
@@ -312,10 +311,19 @@ API地址: https://github.com/shiningwhite/m73_api
            * code                      String  数据库字段
            * width                     String  宽度
            * height                    String  高度
+           * status                    Boolean 状态 // true 启用 false 停用
 ######出参：
     "result":
         {
-            "operation": 1  //修改成功，否则errorCode提示错误消息
+            "adCategory": {
+                "cateId": "1111",
+                "createTime": "2015-09-11",
+                "name": "轮播图",
+                "code": "数据库字段",
+                "width": "600",
+                "height": "300",
+                "status": true  // 停用 true: 开启，false: 停用
+            }
         }     
         
 <a name="addAdCategory"></a>
@@ -327,10 +335,19 @@ API地址: https://github.com/shiningwhite/m73_api
             * code                      String  数据库字段
             * width                     String  宽度
             * height                    String  高度
+            * status                    Boolean 状态 // true 启用 false 停用
 ######出参：
     "result":
         {
-            "operation": 1  //修改成功，否则errorCode提示错误消息
+            "adCategory": {
+                "cateId": "1111",
+                "createTime": "2015-09-11",
+                "name": "轮播图",
+                "code": "数据库字段",
+                "width": "600",
+                "height": "300",
+                "status": true  // 停用 true: 开启，false: 停用
+            }
         } 
         
 <a name="adList"></a>
@@ -385,7 +402,20 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-          "operation": 1  //修改成功，否则errorCode提示错误消息
+           "ad": {
+                "id": "广告ID",
+                "pic": "广告图片",
+                "title": "标题",
+                "desc": "描述",
+                "url": "文章地址",
+                "category": "分类",
+                "rank": "顺序",
+                "statistics": "点击数",
+                "status": "状态",  // true表示开启，false表示关闭
+                "startTime": "上线时间",
+                "endTime": "下线时间",
+                "size": "图片尺寸"
+             }
         }          
         
 <a name="addAd"></a>        
@@ -407,7 +437,20 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-          "operation": 1  //修改成功，否则errorCode提示错误消息
+          "ad": {
+                "id": "广告ID",
+                "pic": "广告图片",
+                "title": "标题",
+                "desc": "描述",
+                "url": "文章地址",
+                "category": "分类",
+                "rank": "顺序",
+                "statistics": "点击数",
+                "status": "状态",  // true表示开启，false表示关闭
+                "startTime": "上线时间",
+                "endTime": "下线时间",
+                "size": "图片尺寸"
+             }
         } 
           
           
@@ -426,6 +469,7 @@ API地址: https://github.com/shiningwhite/m73_api
           "user": [
             {
               "id": "用户ID",
+              "email": "邮箱",
               "nickname": "昵称",
               "name": "真实姓名",
               "role": "角色",
@@ -452,7 +496,15 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-          "operation": 1  //修改成功，否则errorCode提示错误消息
+          "user": {
+              "id": "用户ID",
+              "email": "邮箱",
+              "nickname": "昵称",
+              "name": "真实姓名",
+              "role": "角色",
+              "status": "状态",  // true or false
+              "createTime": "创建时间"
+          }
         } 
         
 <a name="setUser"></a>        
@@ -471,7 +523,15 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-          "operation": 1  //修改成功，否则errorCode提示错误消息
+          "user": {
+              "id": "用户ID",
+              "email": "邮箱",
+              "nickname": "昵称",
+              "name": "真实姓名",
+              "role": "角色",
+              "status": "状态",  // true or false
+              "create"Time": "创建时间"
+          }
         }   
         
 <a name="delUser"></a>        
@@ -539,7 +599,6 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
                 * id                       String 角色ID
-                  page                     Int  分页
 ######出参：
     "result":
         {
@@ -647,7 +706,19 @@ API地址: https://github.com/shiningwhite/m73_api
               },
               { ... }
           } 
-        }                   
+        }        
+        
+ <a name="verifyAuth"></a>
+###验证权限
+#### GET  /verifyAuth
+
+######入参：       
+            
+######出参：
+    "result":
+        {
+            "operation": 1  //y验证成功，否则errorCode提示错误消息
+        }                  
                 
 <a name="applySearchTerm"></a>
 ###飞小编搜索条件
