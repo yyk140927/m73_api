@@ -46,7 +46,7 @@ API地址: https://github.com/shiningwhite/m73_api
             + [新增角色](#addRole)
             + [编辑角色](#setRole)
             + [删除角色](#delRole)
-            + [权限列表](#permissionList)
+            + [权限列表](#authList)
         + 搜索相关
             + [飞小编搜索条件](#applySearchTerm)
             + [广告搜索条件](#adSearchTerm)
@@ -409,6 +409,245 @@ API地址: https://github.com/shiningwhite/m73_api
         {
           "operation": 1  //修改成功，否则errorCode提示错误消息
         } 
+          
+          
+<a name="userList"></a>        
+###用户列表
+#### POST  /userList
+
+######入参：
+               role                    String  角色
+               name                    String  姓名
+               page                    Int 分页 
+
+######出参：
+    "result":
+        {
+          "user": [
+            {
+              "id": "用户ID",
+              "nickname": "昵称",
+              "name": "真实姓名",
+              "role": "角色",
+              "status": "状态",  // true or false
+              "createTime": "创建时间"
+            },
+            { ... }            
+          ],
+          "pageTotal": "数量"
+        }  
+        
+<a name="addUser"></a>        
+###新增用户
+#### POST  /setUser
+
+######入参：
+               * role                    String 角色
+               * name                    String 姓名
+               * email                   String 邮件
+               * nickname                String 昵称
+               * pwd                     String 密码
+               * repeatPwd               String 重复密码
+
+######出参：
+    "result":
+        {
+          "operation": 1  //修改成功，否则errorCode提示错误消息
+        } 
+        
+<a name="setUser"></a>        
+###编辑用户
+#### POST  /setUser
+
+######入参：
+               * id                      String 用户ID
+               * role                    String 角色
+               * name                    String 姓名
+               * email                   String 邮件
+               * nickname                String 昵称
+               * pwd                     String 密码
+               * repeatPwd               String 重复密码
+
+######出参：
+    "result":
+        {
+          "operation": 1  //修改成功，否则errorCode提示错误消息
+        }   
+        
+<a name="delUser"></a>        
+###删除用户
+#### POST  /delUser
+
+######入参：
+               * id                      String 用户ID
+
+######出参：
+    "result":
+        {
+          "operation": 1  //修改成功，否则errorCode提示错误消息
+        }
+        
+<a name="roleList"></a>        
+###角色列表
+#### GET  /roleList
+
+######入参：  
+                page                     Int  分页
+######出参：
+    "result":
+        {
+          "rolelist": [
+           {
+              “id”: "角色ID",
+              "name": "，角色名称",
+              "desc": "描述",
+              "userlist": ["penny", "pp", " ... "],  //  用户列表
+              "secondAuth": [
+                {
+                  "id": 1,
+                  "thirdAuth": [
+                    { 
+                      "id": 1,
+                      "name": "景点审核",
+                    },
+                    { ... }                    
+                  ],
+                  "firstAuth": 1
+                },
+                { ... }
+              ]
+           },
+           { ... }
+          ],
+          "firstAuth": [   
+            {
+                "id": 1,
+                "name": "审核管理", 
+             },
+             {
+               "id": 2,
+               "name": "玩法管理", 
+              },
+              { ... }
+            ],
+          "pageTotal": "数量"
+        }
+ 
+ <a name="delRole"></a>        
+###删除角色
+#### GET  /delRole
+
+######入参：
+                * id                       String 角色ID
+                  page                     Int  分页
+######出参：
+    "result":
+        {
+          "operation": 1  //修改成功，否则errorCode提示错误消息
+        }                                               
+             
+<a name="addRole"></a>        
+###新增角色
+#### GET  /setRole
+
+######入参：
+            {
+              "name": "，角色名称",
+              "desc": "描述",
+              "userlist": ["penny", "pp", " ... "],  //  用户列表
+              "secondAuth": [
+                {
+                  "id": 1,
+                  "thirdAuth": [
+                    { 
+                      "id": 1,
+                      "name": "景点审核",
+                    },
+                    { ... }                    
+                  ],
+                  "firstAuth": 1
+                },
+                { ... }
+              ]
+           }                   
+                  
+######出参：
+    "result":
+        {
+          "operation": 1  //修改成功，否则errorCode提示错误消息
+        }              
+         
+<a name="setRole"></a>        
+###编辑角色
+#### GET  /setRole
+
+######入参：
+            {
+              "id": "角色ID",
+              "name": "，角色名称",
+              "desc": "描述",
+              "userlist": ["penny", "pp", " ... "],  //  用户列表
+              "secondAuth": [
+                {
+                  "id": 1,
+                  "thirdAuth": [
+                    { 
+                      "id": 1,
+                      "name": "景点审核",
+                    },
+                    { ... }                    
+                  ],
+                  "firstAuth": 1
+                },
+                { ... }
+              ]
+           }                   
+                  
+######出参：
+    "result":
+        {
+          "operation": 1  //修改成功，否则errorCode提示错误消息
+        } 
+        
+<a name="authList"></a>        
+###权限列表
+#### GET  /authList
+
+######入参：
+                        
+                  
+######出参：
+    "result":
+        {
+          "auth": {
+            "firstAuth": [   
+            {
+                "id": 1,
+                "name": "审核管理",
+                "field": "manage"
+             },
+             {
+               "id": 2,
+               "name": "玩法管理", 
+               "field": "manage"
+              },
+              { ... }
+            ],
+            "secondAuth": [
+                {
+                  "id": 1,
+                  "thirdAuth": [
+                    { 
+                      "id": 1,
+                      "name": "景点审核",
+                    },
+                    { ... }                    
+                  ],
+                  "firstAuth": 1
+              },
+              { ... }
+          } 
+        }                   
                 
 <a name="applySearchTerm"></a>
 ###飞小编搜索条件
@@ -460,3 +699,17 @@ API地址: https://github.com/shiningwhite/m73_api
         {
             "role": ["全部",  "运营",  " ... "],  // 角色
         }                                                               
+        
+<a name="generateCode"></a>
+###生成二维码
+#### GET  /qrcode
+
+######入参：
+        * url                      String   条件类型  
+          size                     String   图片大小        
+            
+######出参：
+    "result":
+        {
+            "qrcode": "code.jpg"
+        }  
