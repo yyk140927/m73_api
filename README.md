@@ -610,7 +610,6 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
             {
-              "id": "角色ID",
               "name": "，角色名称",
               "desc": "描述",
               "userlist": ["penny", "pp", " ... "],  //  用户列表
