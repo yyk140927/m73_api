@@ -4,7 +4,7 @@ Feekr后台管理系统API Document
 
 Author: shining@feekr.com
 
-Version: 1.0.0
+Version: 1.0.1
 
 Description:Feekr后台管理系统接口
 
@@ -14,7 +14,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ---
 
-#### V1.0.0
+#### V1.0.1
 + 目录
     + [文档描述](#description)
     + [接口详情](#detail)
@@ -558,38 +558,37 @@ API地址: https://github.com/shiningwhite/m73_api
         {
           "rolelist": [
            {
-              “id”: "角色ID",
+              "id": "角色ID",
               "name": "，角色名称",
               "desc": "描述",
               "userlist": ["penny", "pp", " ... "],  //  用户列表
-              "secondAuth": [
-                {
-                  "id": 1,
-                  "thirdAuth": [
-                    { 
-                      "id": 1,
+               "firstAuth": [
+               {
+                 "id": 1,
+                 "name": "审核管理",
+                 "field": "对应数据库字段",
+                 "secondAuth": [
+                 {
+                   "id": "001",
+                   "name": "飞小编审核",
+                   "field": "对应数据库字段",
+                   "thirdAuth": [
+                    {
+                      "id": "1",
                       "name": "景点审核",
+                      "field": "对应数据库字段"
                     },
-                    { ... }                    
-                  ],
-                  "firstAuth": 1
-                },
-                { ... }
-              ]
-           },
-           { ... }
-          ],
-          "firstAuth": [   
-            {
-                "id": 1,
-                "name": "审核管理", 
-             },
-             {
-               "id": 2,
-               "name": "玩法管理", 
+                    { ... }
+                  ] 
+                 },
+                 { ... }
+                ]
               },
               { ... }
-            ],
+             ]             
+            },
+            { ... }              
+           ],
           "pageTotal": "数量"
         }
  
@@ -611,23 +610,35 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
             {
+              "id": "角色ID",
               "name": "，角色名称",
               "desc": "描述",
               "userlist": ["penny", "pp", " ... "],  //  用户列表
-              "secondAuth": [
-                {
-                  "id": 1,
-                  "thirdAuth": [
-                    { 
-                      "id": 1,
+               "firstAuth": [
+               {
+                 "id": 1,
+                 "name": "审核管理",
+                 "field": "对应数据库字段",
+                 "secondAuth": [
+                 {
+                   "id": "001",
+                   "name": "飞小编审核",
+                   "field": "对应数据库字段",
+                   "thirdAuth": [
+                    {
+                      "id": "1",
                       "name": "景点审核",
+                      "field": "对应数据库字段"
                     },
-                    { ... }                    
-                  ],
-                  "firstAuth": 1
-                },
-                { ... }
-              ]
+                    { ... }
+                  ] 
+                 },
+                 { ... }
+                ]
+              },
+              { ... }
+             ]
+
            }                   
                   
 ######出参：
@@ -646,21 +657,31 @@ API地址: https://github.com/shiningwhite/m73_api
               "name": "，角色名称",
               "desc": "描述",
               "userlist": ["penny", "pp", " ... "],  //  用户列表
-              "secondAuth": [
-                {
-                  "id": 1,
-                  "thirdAuth": [
-                    { 
-                      "id": 1,
+               "firstAuth": [
+               {
+                 "id": 1,
+                 "name": "审核管理",
+                 "field": "对应数据库字段",
+                 "secondAuth": [
+                 {
+                   "id": "001",
+                   "name": "飞小编审核",
+                   "field": "对应数据库字段",
+                   "thirdAuth": [
+                    {
+                      "id": "1",
                       "name": "景点审核",
+                      "field": "对应数据库字段"
                     },
-                    { ... }                    
-                  ],
-                  "firstAuth": 1
-                },
-                { ... }
-              ]
-           }                   
+                    { ... }
+                  ] 
+                 },
+                 { ... }
+                ]
+              },
+              { ... }
+             ]
+            }                   
                   
 ######出参：
     "result":
@@ -678,36 +699,31 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-          "auth": {
-            "firstAuth": [   
-            {
-                "id": 1,
-                "name": "审核管理",
-                "field": "manage"
-             },
-             {
-               "id": 2,
-               "name": "玩法管理", 
-               "field": "manage"
-              },
-              { ... }
-            ],
+          "firstAuth": [
+          {
+            "id": 1,
+            "name": "审核管理",
+            "field": "对应数据库字段",
             "secondAuth": [
-                {
-                  "id": 1,
-                  "thirdAuth": [
-                    { 
-                      "id": 1,
-                      "name": "景点审核",
-                    },
-                    { ... }                    
-                  ],
-                  "firstAuth": 1
+             {
+               "id": "001",
+               "name": "飞小编审核",
+               "field": "对应数据库字段",
+               "thirdAuth": [
+              {
+                 "id": "1",
+                 "name": "景点审核",
+                 "field": "对应数据库字段"
               },
               { ... }
-          } 
-        }        
-        
+             ] 
+           },
+          { ... }
+         ]
+       },
+      { ... }
+     ]
+    }
  <a name="verifyAuth"></a>
 ###验证权限
 #### GET  /verifyAuth
