@@ -747,16 +747,21 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-            "periods": [1,2,3],  // 期数
+            "periods": [{
+              "id": 1,
+              "option": "第一期" 
+             },
+             { ... }
+            ],  // 期数
             "applyStatus": [{
               "id": 1,   // 状态Id
-              "status": "全部"   //  全部，通过，拒绝
+              "option": "全部"   //  全部，通过，拒绝
              },
              { ... }
             ],
             "mailStatus": [{
               "id": 1,   // 状态Id
-              "status": "全部"   //  发送成功，发送失败，未发送
+              "option": "全部"   //  发送成功，发送失败，未发送
              },
              { ... }
             ]
@@ -772,7 +777,13 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-            "adCategory": ["全部",  "精选目录",  " ... "],  // 广告类别
+            "adCategory": [
+              {
+                "id": 1,
+                "option": "第一期" 
+              },
+             { ... }
+            ],  // 广告类别
         }
         
 <a name="userSearchTerm"></a>
@@ -785,7 +796,13 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-            "role": ["全部",  "运营",  " ... "],  // 角色
+            "role": [
+              {
+                "id": 1,
+                "option": "第一期" 
+              },
+              { ... }
+            ],  // 角色
         }                                                               
         
 <a name="generateCode"></a>
