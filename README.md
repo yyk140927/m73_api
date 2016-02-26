@@ -53,7 +53,9 @@ API地址: https://github.com/shiningwhite/m73_api
             + [广告搜索条件](#adSearchTerm)
             + [用户搜索条件](#userSearchTerm)
         + 二维码相关
-            + [生成二维码](#generateCode)                 
+            + [生成二维码](#generateCode)
+        + 导航相关
+            + [导航列表](#navList)                     
     
 <a name="description"></a>
 ##文档描述
@@ -106,7 +108,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 <a name="login"></a>
 ###用户登录
-#### POST  /login
+#### POST  /auth/login
 
 ######入参：
             * username                  String    用户名
@@ -121,7 +123,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="resetPwd"></a>
 ###修改密码
-#### POST  /resetPwd
+#### POST  /auth/resetPwd
 
 ######入参：
             * oldPwd                  String    原密码
@@ -137,7 +139,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 <a name="applyList"></a>           
 ###飞小编报名审核
-#### GET  /applyList?page={page}
+#### GET  /apply/list?page={page}
 
 ######入参：
               page                    Int       页数
@@ -175,7 +177,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
  <a name="delApply"></a>
 ###删除飞小编申请
-#### POST  /delApply
+#### POST  /apply/del
 
 ######入参：
             * applyId                 String    申请ID
@@ -189,7 +191,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 <a name="setApply"></a>
 ###编辑飞小编申请
-#### POST  /setApply
+#### POST  /apply/set
 
 ######入参：
             * applyId                 String    申请ID
@@ -204,7 +206,7 @@ API地址: https://github.com/shiningwhite/m73_api
  
 <a name="sendEmail"></a>
 ###发送邮件通知
-#### POST  /sendEmail
+#### POST  /email/send
 
 ######入参：
             * applyId                 Array    申请ID
@@ -223,7 +225,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="applyDetail"></a>
 ###飞小编报名审核详情页
-#### GET  /applyDetail?apply={applyId}
+#### GET  /apply/detail?apply={applyId}
 
 ######入参：
             * applyId                 String    申请ID
@@ -250,7 +252,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="emailTpl"></a>
 ###邮件通知模版
-#### GET  /emailTpl
+#### GET  /email/tpl
 
 ######入参：
                    
@@ -265,7 +267,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
  <a name="setEmail"></a>       
 ###编辑邮件模版
-#### POST  /setEmail
+#### POST  /email/set
 
 ######入参：
             * success                 String    通过的模版内容
@@ -280,7 +282,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 <a name="adCategory"></a>
 ###广告分类管理
-#### GET  /adCategory
+#### GET  /adCategory/list
 
 ######入参：
              page                      Int    分页     
@@ -303,7 +305,7 @@ API地址: https://github.com/shiningwhite/m73_api
                             
 <a name="setAdCategory"></a>
 ###编辑广告分类
-#### POST  /setAdCategory
+#### POST  /adCategory/set
 
 ######入参：
            * cateId                    String  广告分类ID
@@ -328,7 +330,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="addAdCategory"></a>
 ###新增广告分类
-#### POST  /addAdCategory
+#### POST  /AdCategory/add
 
 ######入参：
             * name                      String  名称
@@ -352,7 +354,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="adList"></a>
 ###广告列表
-#### POST  /adList
+#### POST  /ad/list
 
 ######入参：
              adCategory                String  广告分类
@@ -384,7 +386,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 <a name="setAd"></a>        
 ###编辑广告
-#### POST  /setAd
+#### POST  /ad/set
 
 ######入参：
              * id                      String  广告ID
@@ -420,7 +422,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="addAd"></a>        
 ###新增广告
-#### POST  /setAd
+#### POST  /ad/set
 
 ######入参：
              * category                String  广告分类
@@ -456,7 +458,7 @@ API地址: https://github.com/shiningwhite/m73_api
           
 <a name="userList"></a>        
 ###用户列表
-#### POST  /userList
+#### POST  /user/list
 
 ######入参：
                role                    String  角色
@@ -483,7 +485,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="addUser"></a>        
 ###新增用户
-#### POST  /setUser
+#### POST  /user/set
 
 ######入参：
                * role                    String 角色
@@ -509,7 +511,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="setUser"></a>        
 ###编辑用户
-#### POST  /setUser
+#### POST  /user/set
 
 ######入参：
                * id                      String 用户ID
@@ -536,7 +538,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="delUser"></a>        
 ###删除用户
-#### POST  /delUser
+#### POST  /user/del
 
 ######入参：
                * id                      String 用户ID
@@ -549,7 +551,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="roleList"></a>        
 ###角色列表
-#### GET  /roleList
+#### GET  /role/list
 
 ######入参：  
                 page                     Int  分页
@@ -594,7 +596,7 @@ API地址: https://github.com/shiningwhite/m73_api
  
  <a name="delRole"></a>        
 ###删除角色
-#### GET  /delRole
+#### GET  /role/del
 
 ######入参：
                 * id                       String 角色ID
@@ -606,7 +608,7 @@ API地址: https://github.com/shiningwhite/m73_api
              
 <a name="addRole"></a>        
 ###新增角色
-#### GET  /setRole
+#### GET  /role/set
 
 ######入参：
             {
@@ -648,7 +650,7 @@ API地址: https://github.com/shiningwhite/m73_api
          
 <a name="setRole"></a>        
 ###编辑角色
-#### GET  /setRole
+#### GET  /role/set
 
 ######入参：
             {
@@ -690,7 +692,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="authList"></a>        
 ###权限列表
-#### GET  /authList
+#### GET  /auth/list
 
 ######入参：
                         
@@ -725,7 +727,7 @@ API地址: https://github.com/shiningwhite/m73_api
     }
  <a name="verifyAuth"></a>
 ###验证权限
-#### GET  /verifyAuth
+#### GET  /auth/verifyAuth
 
 ######入参：       
             
@@ -737,7 +739,7 @@ API地址: https://github.com/shiningwhite/m73_api
                 
 <a name="applySearchTerm"></a>
 ###飞小编搜索条件
-#### GET  /searchTerm?type=fxbApply
+#### GET  /search/term?type=fxbApply
 
 ######入参：
         * type                      String   条件类型          
@@ -762,7 +764,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="adSearchTerm"></a>
 ###广告搜索条件
-#### GET  /searchTerm?type=ad
+#### GET  /search/term?type=ad
 
 ######入参：
         * type                      String   条件类型          
@@ -775,7 +777,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="userSearchTerm"></a>
 ###用户搜索条件
-#### GET  /searchTerm?type=user
+#### GET  /search/term?type=user
 
 ######入参：
         * type                      String   条件类型          
@@ -798,4 +800,28 @@ API地址: https://github.com/shiningwhite/m73_api
     "result":
         {
             "qrcode": "code.jpg"
-        }  
+        }
+        
+ <a name="navList"></a>
+###导航列表
+#### GET  /navList
+
+######入参：        
+            
+######出参：
+    "result":
+        {
+            "firstMenu": [
+              {
+                 "name": "审核管理",
+                 "secondMenu": [
+                  {
+                     "name": "分类管理",
+                     "url": "user"
+                  },
+                  { ... }
+                ]
+              },
+              { ... }           
+            ]
+        }         
