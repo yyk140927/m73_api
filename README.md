@@ -330,7 +330,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="addAdCategory"></a>
 ###新增广告分类
-#### POST  /AdCategory/add
+#### POST  /adCategory/add
 
 ######入参：
             * name                      String  名称
