@@ -739,7 +739,7 @@ API地址: https://github.com/shiningwhite/m73_api
                 
 <a name="applySearchTerm"></a>
 ###飞小编搜索条件
-#### GET  /search/term?type=fxbApply
+#### GET  /searchTerm?type=fxbApply
 
 ######入参：
         * type                      String   条件类型          
@@ -764,7 +764,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="adSearchTerm"></a>
 ###广告搜索条件
-#### GET  /search/term?type=ad
+#### GET  /searchTerm?type=ad
 
 ######入参：
         * type                      String   条件类型          
@@ -777,7 +777,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="userSearchTerm"></a>
 ###用户搜索条件
-#### GET  /search/term?type=user
+#### GET  /searchTerm?type=user
 
 ######入参：
         * type                      String   条件类型          
