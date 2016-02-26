@@ -821,7 +821,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
  <a name="navList"></a>
 ###导航列表
-#### GET  /navList
+#### GET  /auth/navList
 
 ######入参：        
             
