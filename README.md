@@ -692,7 +692,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="authList"></a>        
 ###权限列表
-#### GET  /auth/list
+#### GET  /access/list
 
 ######入参：
                         
