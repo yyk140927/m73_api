@@ -55,7 +55,9 @@ API地址: https://github.com/shiningwhite/m73_api
         + 二维码相关
             + [生成二维码](#generateCode)
         + 导航相关
-            + [导航列表](#navList)                     
+            + [导航列表](#navList)
+        + 系统面板
+            + [快捷方式](#hotkey)                        
     
 <a name="description"></a>
 ##文档描述
@@ -139,7 +141,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 <a name="applyList"></a>           
 ###飞小编报名审核
-#### GET  /apply/list?page={page}
+#### GET  /apply/lists?page={page}
 
 ######入参：
               page                    Int       页数
@@ -282,7 +284,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 <a name="adCategory"></a>
 ###广告分类管理
-#### GET  /adCategory/list
+#### GET  /adCategory/lists
 
 ######入参：
              page                      Int    分页     
@@ -354,7 +356,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="adList"></a>
 ###广告列表
-#### POST  /ad/list
+#### POST  /ad/lists
 
 ######入参：
              adCategory                String  广告分类
@@ -458,7 +460,7 @@ API地址: https://github.com/shiningwhite/m73_api
           
 <a name="userList"></a>        
 ###用户列表
-#### POST  /user/list
+#### POST  /user/lists
 
 ######入参：
                role                    String  角色
@@ -692,7 +694,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="authList"></a>        
 ###权限列表
-#### GET  /access/list
+#### GET  /access/lists
 
 ######入参：
                         
@@ -842,3 +844,22 @@ API地址: https://github.com/shiningwhite/m73_api
               { ... }           
             ]
         }         
+
+ <a name="hotkey"></a>
+###快捷方式
+#### GET  /auth/hotkey
+
+######入参：        
+            
+######出参：
+    "result":
+        {
+            "hotkey": [
+              {
+                 "name": "审核管理",
+                 "url": "http://",
+                 "icon": "对应的icon"
+              },
+              { ... }           
+            ]
+        } 
