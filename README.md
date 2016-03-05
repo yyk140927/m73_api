@@ -262,7 +262,9 @@ API地址: https://github.com/shiningwhite/m73_api
     "result":
         {
              "email": {
+             	"successTitle": "通过标题",
                 "success": "通过的模版内容",
+                "failTitle": "失败标题",
                 "fail": "失败的模版内容"
              }
         }
@@ -274,6 +276,8 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
             * success                 String    通过的模版内容
             * fail                    String    失败的模版内容
+            * successTitle            String    通过的标题
+            * failTitle               String    失败的标题
                    
 ######出参：
 
@@ -373,7 +377,10 @@ API地址: https://github.com/shiningwhite/m73_api
                 "title": "标题",
                 "desc": "描述",
                 "url": "文章地址",
-                "category": "分类",
+                "category": "[{ 
+                    "id": "分类ID",
+                    "name": "分类名"
+                  }, { ... }]",
                 "rank": "顺序",
                 "statistics": "点击数",
                 "status": "状态",  // true表示开启，false表示关闭
@@ -412,7 +419,11 @@ API地址: https://github.com/shiningwhite/m73_api
                 "title": "标题",
                 "desc": "描述",
                 "url": "文章地址",
-                "category": "分类",
+                "category": "[{ 
+                    "id": "分类ID",
+                    "name": "分类名",
+                    "select": true  // 当前分类为True，否则为False
+                  }, { ... }]",
                 "rank": "顺序",
                 "statistics": "点击数",
                 "status": "状态",  // true表示开启，false表示关闭
@@ -447,7 +458,10 @@ API地址: https://github.com/shiningwhite/m73_api
                 "title": "标题",
                 "desc": "描述",
                 "url": "文章地址",
-                "category": "分类",
+                 "category": "[{ 
+                    "id": "分类ID",
+                    "name": "分类名"
+                  }, { ... }]",
                 "rank": "顺序",
                 "statistics": "点击数",
                 "status": "状态",  // true表示开启，false表示关闭
