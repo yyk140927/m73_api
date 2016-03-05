@@ -377,7 +377,10 @@ API地址: https://github.com/shiningwhite/m73_api
                 "title": "标题",
                 "desc": "描述",
                 "url": "文章地址",
-                "category": "当前广告分类ID",
+                "category": {
+                   id: "当前广告分类ID",
+                   name: "当前分类名称"
+                }
                 "rank": "顺序",
                 "statistics": "点击数",
                 "status": "状态",  // true表示开启，false表示关闭
@@ -415,7 +418,10 @@ API地址: https://github.com/shiningwhite/m73_api
                 "title": "标题",
                 "desc": "描述",
                 "url": "文章地址",
-                "category": "当前广告分类ID",
+                "category": {
+                   id: "当前广告分类ID",
+                   name: "当前分类名称"
+                }
                 "rank": "顺序",
                 "statistics": "点击数",
                 "status": "状态",  // true表示开启，false表示关闭
@@ -449,7 +455,10 @@ API地址: https://github.com/shiningwhite/m73_api
                 "title": "标题",
                 "desc": "描述",
                 "url": "文章地址",
-                "category": "当前广告分类ID",
+                "category": {
+                   id: "当前广告分类ID",
+                   name: "当前分类名称"
+                }
                 "rank": "顺序",
                 "statistics": "点击数",
                 "status": "状态",  // true表示开启，false表示关闭
