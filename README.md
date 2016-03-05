@@ -377,11 +377,7 @@ API地址: https://github.com/shiningwhite/m73_api
                 "title": "标题",
                 "desc": "描述",
                 "url": "文章地址",
-                "category": "[{ 
-                    "id": "分类ID",
-                    "name": "分类名",
-                    "size": "图片尺寸400X600"
-                  }, { ... }]",
+                "categoryId": "当前广告分类ID",
                 "rank": "顺序",
                 "statistics": "点击数",
                 "status": "状态",  // true表示开启，false表示关闭
@@ -419,12 +415,7 @@ API地址: https://github.com/shiningwhite/m73_api
                 "title": "标题",
                 "desc": "描述",
                 "url": "文章地址",
-                "category": "[{ 
-                    "id": "分类ID",
-                    "name": "分类名",
-                    "select": true,  // 当前分类为True，否则为False
-                    "size": "图片尺寸400X600"
-                  }, { ... }]",
+                "categoryId": "当前广告分类ID",
                 "rank": "顺序",
                 "statistics": "点击数",
                 "status": "状态",  // true表示开启，false表示关闭
@@ -458,11 +449,7 @@ API地址: https://github.com/shiningwhite/m73_api
                 "title": "标题",
                 "desc": "描述",
                 "url": "文章地址",
-                 "category": "[{ 
-                    "id": "分类ID",
-                    "name": "分类名",
-                    "size": "图片尺寸400X600"
-                  }, { ... }]",
+                "categoryId": "当前广告分类ID",
                 "rank": "顺序",
                 "statistics": "点击数",
                 "status": "状态",  // true表示开启，false表示关闭
@@ -796,7 +783,8 @@ API地址: https://github.com/shiningwhite/m73_api
             "adCategory": [
               {
                 "id": 1,
-                "option": "第一期" 
+                "option": "第一期",
+                "size":"图片尺寸600*400"
               },
              { ... }
             ],  // 广告类别
