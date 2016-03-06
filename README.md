@@ -504,8 +504,8 @@ API地址: https://github.com/shiningwhite/m73_api
                * name                    String 姓名
                * email                   String 邮件
                * nickname                String 昵称
-               * pwd                     String 密码
-               * repeatPwd               String 重复密码
+                 pwd                     String 密码
+                 repeatPwd               String 重复密码
 
 ######出参：
     "result":
@@ -531,8 +531,8 @@ API地址: https://github.com/shiningwhite/m73_api
                * name                    String 姓名
                * email                   String 邮件
                * nickname                String 昵称
-               * pwd                     String 密码
-               * repeatPwd               String 重复密码
+                 pwd                     String 密码
+                 repeatPwd               String 重复密码
 
 ######出参：
     "result":
@@ -563,7 +563,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="roleList"></a>        
 ###角色列表
-#### GET  /role/list
+#### GET  /role/lists
 
 ######入参：  
                 page                     Int  分页
@@ -657,7 +657,28 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-          "operation": 1  //修改成功，否则errorCode提示错误消息
+           "role": {
+            "id": 1,
+            "name": "审核管理",
+            "field": "对应数据库字段",
+            "secondAuth": [
+             {
+               "id": "001",
+               "name": "飞小编审核",
+               "field": "对应数据库字段",
+               "thirdAuth": [
+                {
+                 "id": "1",
+                 "name": "景点审核",
+                 "field": "对应数据库字段"
+                },
+                { ... }
+               ] 
+              },
+             { ... }
+           ]
+          },
+          { ... }
         }              
          
 <a name="setRole"></a>        
@@ -699,7 +720,28 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-          "operation": 1  //修改成功，否则errorCode提示错误消息
+          "role": {
+            "id": 1,
+            "name": "审核管理",
+            "field": "对应数据库字段",
+            "secondAuth": [
+             {
+               "id": "001",
+               "name": "飞小编审核",
+               "field": "对应数据库字段",
+               "thirdAuth": [
+                {
+                 "id": "1",
+                 "name": "景点审核",
+                 "field": "对应数据库字段"
+                },
+                { ... }
+               ] 
+              },
+             { ... }
+           ]
+          },
+          { ... }
         } 
         
 <a name="authList"></a>        
