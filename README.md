@@ -144,6 +144,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /apply/lists?page={page}
 
 ######入参：
+              applyId                 String    申请ID // 用于详情页
               page                    Int       页数
               periods                 String    期数
               applyStatus             Boolean   申请状态
