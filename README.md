@@ -168,7 +168,7 @@ API地址: https://github.com/shiningwhite/m73_api
                   "applyTime": "报名时间",
                   "from": "来源",
                   "applyStatus": "状态",  // true:通过, false: 未通过
-                  "mailStatus": "邮件状态",  //  1:发送成功，2:未发送，0:发送失败
+                  "mailStatus": "邮件状态",  //  0:未发送 1:发送成功 2:发送失败
                   "failReason": "失败原因，该字段仅存在于邮件发送失败",
                   "remark": "备注"
               },
