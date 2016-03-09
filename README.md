@@ -214,8 +214,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
             * applyId                 Array    申请ID
-              sms                     String   短息类型 'sms'
-              email                   String   邮件类型 'email'
+              type                    String   消息类型 ‘sms,email’
                    
 ######出参：
     "result":
