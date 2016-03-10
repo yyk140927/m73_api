@@ -170,7 +170,8 @@ API地址: https://github.com/shiningwhite/m73_api
                   "applyStatus": "状态",  // true:通过, false: 未通过
                   "mailStatus": "邮件状态",  //  0:未发送 1:发送成功 2:发送失败
                   "smsStatus": "短信状态",  //  0:未发送 1:发送成功 2:发送失败
-                  "failReason": "失败原因，该字段仅存在于邮件发送失败",
+                  "emailFailReason": "失败原因，该字段仅存在于邮件发送失败",
+                  "smsFailReason": "失败原因，该字段仅存在于短信发送失败",
                   "remark": "备注"
               },
               { ... }
@@ -210,7 +211,7 @@ API地址: https://github.com/shiningwhite/m73_api
  
 <a name="sendEmail"></a>
 ###发送邮件通知
-#### POST  /msg/send
+#### POST  /email/send
 
 ######入参：
             * applyId                 Array    申请ID
@@ -219,7 +220,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-            sms: [{
+            "sms": [{
                "applyId": 1111,
                "status":   true // true表示发送成功, false表示发送失败
                "failReason": "发送失败原因,仅当发送失败时给出" 
@@ -227,7 +228,7 @@ API地址: https://github.com/shiningwhite/m73_api
              { ... }
             ],
             
-           email: [{
+           "email": [{
                "applyId": 1111,
                "status":   true // true表示发送成功, false表示发送失败
                "failReason": "发送失败原因,仅当发送失败时给出" 
