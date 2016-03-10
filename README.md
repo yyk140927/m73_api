@@ -830,6 +830,11 @@ API地址: https://github.com/shiningwhite/m73_api
               "id": 1,   // 状态Id
               "option": "全部"   //  发送成功，发送失败，未发送
              },
+             { ... },
+             "smsStatus": [{
+              "id": 1,   // 状态Id
+              "option": "全部"   //  发送成功，发送失败，未发送
+             },
              { ... }
             ]
         }
