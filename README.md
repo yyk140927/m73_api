@@ -4,7 +4,7 @@ Feekr后台管理系统API Document
 
 Author: shining@feekr.com
 
-Version: 1.0.1
+Version: 1.1.0
 
 Description:Feekr后台管理系统接口
 
@@ -14,7 +14,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ---
 
-#### V1.0.1
+#### V1.1.0
 + 目录
     + [文档描述](#description)
     + [接口详情](#detail)
@@ -62,7 +62,10 @@ API地址: https://github.com/shiningwhite/m73_api
             + [玩法奖励列表](#awardList)
             + [玩法奖励设置](#awardSet)
             + [玩法兑换列表](#exchangeList)  
-            + [玩法兑换编辑](#exchangeSet)                                      
+            + [玩法兑换编辑](#exchangeSet)
+        + 图片上传
+            + [获取又拍云上传签名](#getSign)
+            + [图片上传](#upload)                                         
     
 <a name="description"></a>
 ##文档描述
@@ -995,7 +998,7 @@ API地址: https://github.com/shiningwhite/m73_api
         
 <a name="exchangeList"></a>
 ###玩法兑换列表
-#### POST  /award/exchangeList
+#### POST  /exchange/lists
 
 ######入参：
           
@@ -1022,9 +1025,9 @@ API地址: https://github.com/shiningwhite/m73_api
            "pageTotal": "数量"
         }  
         
- <a name="exchangeSet"></a>
+<a name="exchangeSet"></a>
 ###玩法兑换编辑
-#### POST  /award/exchangeSet
+#### POST  /exchange/set
 
 ######入参：
 		     remark                    String  备注
@@ -1044,4 +1047,48 @@ API地址: https://github.com/shiningwhite/m73_api
                 "remark": "备注"
                 "status": "寄出状态"  // 1表示已寄出，0表示未寄出
               }, 
-        }                            
+        } 
+        
+<a name="getSign"></a>
+###获取又拍云上传签名
+#### POST  /getSign
+
+######入参：
+
+######出参：
+    "result":
+        {
+            "sign": {
+              "signature": "校验签名",
+              "policy": "存储/校验信息",
+              "domain": "返回图片的domain",
+              "url": "图片上传的空间域名",
+              "spaceName": "上传文件到又拍云空间名"
+            }
+        }    
+        
+<a name="upload"></a>
+###上传到又拍云
+#### POST  http://{domain}/{spaceName}
+
+######入参：
+		     * signature           String 校验签名
+             * policy              String 存储/校验信息
+             * domain              String 又拍云接口
+             * spaceName           String 图片空间名
+
+######出参：
+    "result":
+        {
+            "code": 200
+            "ext-param": ""
+            "image-frames": 1
+            "image-height": 2309
+            "image-type": "JPEG"
+            "image-width": 1732
+            "message": "ok"
+            "sign": "632afefdfbb2149fd600b348bc13d857"
+            "time": 1449655376
+            "url": "/2015/12/09/1002567449e6b3dcc09dc6766c3045f0406a21"
+          
+        }                                      
