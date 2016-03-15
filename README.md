@@ -58,7 +58,7 @@ API地址: https://github.com/shiningwhite/m73_api
             + [导航列表](#navList)
         + 系统面板
             + [快捷方式](#hotkey)
-        + 积分商城管理
+        + 玩法商城管理
             + [玩法奖励列表](#awardList)
             + [玩法奖励设置](#awardSet)
             + [玩法兑换列表](#exchangeList)  
