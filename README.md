@@ -57,7 +57,12 @@ API地址: https://github.com/shiningwhite/m73_api
         + 导航相关
             + [导航列表](#navList)
         + 系统面板
-            + [快捷方式](#hotkey)                        
+            + [快捷方式](#hotkey)
+        + 积分商城管理
+            + [玩法奖励列表](#awardList)
+            + [玩法奖励设置](#awardSet)
+            + [玩法兑换列表](#exchangeList)  
+            + [玩法兑换编辑](#exchangeSet)                                      
     
 <a name="description"></a>
 ##文档描述
@@ -933,4 +938,110 @@ API地址: https://github.com/shiningwhite/m73_api
               },
               { ... }           
             ]
-        } 
+        }
+        
+<a name="awardList"></a>
+###玩法奖励列表
+#### POST  /award/lists
+
+######入参：
+            
+             name                      String 奖励名称
+             page                      Int  分页   
+
+######出参：
+    "result":
+        {
+            "award": [
+              {
+                "id": "奖励ID",
+                "pic": "奖励图片",
+                "name": "奖励名称",
+                "playCount": "玩法数量",
+                "highPlayCount": "精华玩法数量",
+                "status": "状态"  // 1表示上架，0表示下架
+              }, 
+              { ... }
+            ],
+           "pageTotal": "数量"
+        }
+            
+<a name="awardSet"></a>
+###玩法奖励编辑
+#### POST  /award/set
+
+######入参：
+           * id                        Int     编辑时传ID，新增则不传
+             pic                       String  商品封面地址
+             name                      String  奖励商品名称
+             highPlayCount             Int     精华玩法数量
+             playCount                 Int     玩法数量
+             status                    String  商品上架、下架
+             awardDesc                 String  商品描述                   
+
+######出参：
+    "result":
+        {
+            "award": 
+              {
+                "id": "奖励ID",
+                "pic": "奖励图片",
+                "name": "奖励名称",
+                "playCount": "玩法数量",
+                "highPlayCount": "精华玩法数量",
+                "status": "状态"  // 1表示上架，0表示下架
+              }
+        }  
+        
+<a name="exchangeList"></a>
+###玩法兑换列表
+#### POST  /award/exchangeList
+
+######入参：
+          
+             status                    String 投递状态
+             username                  String 飞小编用户名
+             page                      Int  分页   
+
+######出参：
+    "result":
+        {
+            "exchange": [
+              {
+                "id": "飞小编ID",
+                "awardName": "奖励名称",
+                "username": "用户名",
+                "contact": "联系人",
+                "phone": "联系电话",
+                "address": "收货地址",
+                "remark": "备注"
+                "status": "状态"  // 1表示已寄出，0表示未寄出
+              }, 
+              { ... }
+            ],
+           "pageTotal": "数量"
+        }  
+        
+ <a name="exchangeSet"></a>
+###玩法兑换编辑
+#### POST  /award/exchangeSet
+
+######入参：
+		     remark                    String  备注
+		     status                    String 寄出／未寄出状态 
+
+######出参：
+    "result":
+        {
+            "exchange":
+              {
+                "id": "飞小编ID",
+                "awardName": "奖励名称",
+                "username": "用户名",
+                "contact": "联系人",
+                "phone": "联系电话",
+                "address": "收货地址",
+                "remark": "备注"
+                "status": "寄出状态"  // 1表示已寄出，0表示未寄出
+              }, 
+        }                            
