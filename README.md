@@ -53,7 +53,7 @@ API地址: https://github.com/shiningwhite/m73_api
             + [广告搜索条件](#adSearchTerm)
             + [用户搜索条件](#userSearchTerm)
             + [玩法兑换搜索条件](#exchangeTerm)
-            + [玩法商品搜索条件](#exchangeTerm)
+            + [玩法商品搜索条件](#awardTerm)
         + 二维码相关
             + [生成二维码](#generateCode)
         + 导航相关
@@ -907,7 +907,7 @@ API地址: https://github.com/shiningwhite/m73_api
             ]
         }                                                               
         
-<a name="exchangeTerm"></a>
+<a name="awardTerm"></a>
 ###玩法商品搜索条件
 #### GET  /searchTerm?type=award
 
