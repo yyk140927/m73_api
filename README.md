@@ -1015,7 +1015,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
            * id                        Int     编辑时传ID，新增则不传
-             pic                       String  商品封面地址
+             picUrl                    String  商品封面地址
              name                      String  奖励商品名称
              highPlayCount             Int     精华玩法数量
              playCount                 Int     玩法数量
