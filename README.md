@@ -1014,6 +1014,7 @@ API地址: https://github.com/shiningwhite/m73_api
                 "name": "奖励名称",
                 "playCount": "玩法数量",
                 "highPlayCount": "精华玩法数量",
+                "awardDesc": "商品描述",
                 "status": "状态"  // 1表示上架，0表示下架
               }
         }  
@@ -1076,7 +1077,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /getSign
 
 ######入参：
-
+		* spaceName                 String 上传文件到又拍云空间名
 ######出参：
     "result":
         {
@@ -1084,8 +1085,7 @@ API地址: https://github.com/shiningwhite/m73_api
               "signature": "校验签名",
               "policy": "存储/校验信息",
               "domain": "返回图片的domain",
-              "url": "图片上传的空间域名",
-              "spaceName": "上传文件到又拍云空间名"
+              "url": "图片上传的空间域名"
             }
         }    
         
