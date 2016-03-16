@@ -1028,7 +1028,8 @@ API地址: https://github.com/shiningwhite/m73_api
             "award": 
               {
                 "id": "奖励ID",
-                "pic": "奖励图片",
+                "picDomain": "图片domain",
+                "picUrl": "图片路径",
                 "name": "奖励名称",
                 "playCount": "玩法数量",
                 "highPlayCount": "精华玩法数量",
