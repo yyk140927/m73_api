@@ -1053,6 +1053,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /exchange/set
 
 ######入参：
+			*id                        Int    兑换ID 
 		     remark                    String  备注
 		     status                    String 寄出／未寄出状态 
 
