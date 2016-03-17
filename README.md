@@ -988,7 +988,9 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /award/lists
 
 ######入参：
-            
+			
+             id                        String 用户ID
+             awardStatus               String 上下架状态
              name                      String 奖励名称
              page                      Int  分页   
 
@@ -1003,7 +1005,7 @@ API地址: https://github.com/shiningwhite/m73_api
                 "playCount": "玩法数量",
                 "highPlayCount": "精华玩法数量",
                 "awardDesc": "商品描述",  
-                "status": "状态"  // 1表示上架，0表示下架
+                "awardStatus": "状态"  // 1表示上架，0表示下架
               }, 
               { ... }
             ],
@@ -1020,7 +1022,7 @@ API地址: https://github.com/shiningwhite/m73_api
              name                      String  奖励商品名称
              highPlayCount             Int     精华玩法数量
              playCount                 Int     玩法数量
-             status                    String  商品上架、下架
+             awardStatus               String  商品上架、下架
              awardDesc                 String  商品描述                   
 
 ######出参：
@@ -1035,7 +1037,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
           
-             status                    String 投递状态
+             sendStatus                String 投递状态
              username                  String 飞小编用户名
              page                      Int  分页   
 
@@ -1051,7 +1053,7 @@ API地址: https://github.com/shiningwhite/m73_api
                 "phone": "联系电话",
                 "address": "收货地址",
                 "remark": "备注"
-                "status": "状态"  // 1表示已寄出，0表示未寄出
+                "sendStatus": "状态"  // 1表示已寄出，0表示未寄出
               }, 
               { ... }
             ],
@@ -1065,7 +1067,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			*id                        Int    兑换ID 
 		     remark                    String  备注
-		     status                    String 寄出／未寄出状态 
+		     sendStatus                String 寄出／未寄出状态 
 
 ######出参：
     "result":
@@ -1079,7 +1081,7 @@ API地址: https://github.com/shiningwhite/m73_api
                 "phone": "联系电话",
                 "address": "收货地址",
                 "remark": "备注"
-                "status": "寄出状态"  // 1表示已寄出，0表示未寄出
+                "sendStatus": "寄出状态"  // 1表示已寄出，0表示未寄出
               }, 
         } 
         
