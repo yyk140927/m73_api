@@ -1002,6 +1002,7 @@ API地址: https://github.com/shiningwhite/m73_api
                 "name": "奖励名称",
                 "playCount": "玩法数量",
                 "highPlayCount": "精华玩法数量",
+                "awardDesc": "商品描述",  
                 "status": "状态"  // 1表示上架，0表示下架
               }, 
               { ... }
@@ -1025,17 +1026,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-            "award": 
-              {
-                "id": "奖励ID",
-                "picDomain": "图片domain",
-                "picUrl": "图片路径",
-                "name": "奖励名称",
-                "playCount": "玩法数量",
-                "highPlayCount": "精华玩法数量",
-                "awardDesc": "商品描述",
-                "status": "状态"  // 1表示上架，0表示下架
-              }
+            "operation" : 1
         }  
         
 <a name="exchangeList"></a>
