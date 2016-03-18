@@ -182,7 +182,9 @@ API地址: https://github.com/shiningwhite/m73_api
                   "smsStatus": "短信状态",  //  0:未发送 1:发送成功 2:发送失败
                   "emailFailReason": "失败原因，该字段仅存在于邮件发送失败",
                   "smsFailReason": "失败原因，该字段仅存在于短信发送失败",
-                  "remark": "备注"
+                  "remark": "备注",
+                  "phone": "联系电话",
+                  "email": "邮箱"
               },
               { ... }
             ],             
@@ -271,7 +273,9 @@ API地址: https://github.com/shiningwhite/m73_api
                   "applyStatus": "状态",  // true:通过, false: 未通过
                   "mailStatus": "邮件状态",  //  0:未发送 1:发送成功 2:发送失败
                   "failReason": "失败原因，该字段仅存在于邮件发送失败",
-                  "remark": "备注"
+                  "remark": "备注",
+                  "phone": "联系电话",
+                  "email": "邮箱"                  
              }
         } 
         
