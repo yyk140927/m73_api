@@ -162,6 +162,7 @@ API地址: https://github.com/shiningwhite/m73_api
               name                    String    姓名
               qq                      String    qq号
               city                    String    熟悉的城市
+              remark                  String    备注
             
 ######出参：
     "result":
