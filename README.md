@@ -401,7 +401,8 @@ API地址: https://github.com/shiningwhite/m73_api
             "ad": [
               {
                 "id": "广告ID",
-                "pic": "广告图片",
+                "picDomain": "图片domain",
+                "picUrl": "图片路径",
                 "title": "标题",
                 "desc": "描述",
                 "url": "文章地址",
@@ -414,6 +415,7 @@ API地址: https://github.com/shiningwhite/m73_api
                 "status": "状态",  // true表示开启，false表示关闭
                 "startTime": "上线时间",
                 "endTime": "下线时间"
+               
               }, 
               { ... }
             ],
