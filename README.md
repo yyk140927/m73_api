@@ -428,7 +428,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
              * id                      String  广告ID
-             * category                String  广告分类
+             * categoryId              String  广告分类
                desc                    String  描述
                rank                    String  排序
                status                  Boolean  状态 true or false
