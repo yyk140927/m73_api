@@ -870,7 +870,8 @@ API地址: https://github.com/shiningwhite/m73_api
               {
                 "id": 1,
                 "option": "第一期",
-                "size":"图片尺寸600*400"
+                "width":600,
+                "height": 400 
               },
              { ... }
             ],  // 广告类别
