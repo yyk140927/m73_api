@@ -1046,7 +1046,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-            "operation" : 1
+            id: 001  // 返回商品ID
         }  
         
 <a name="exchangeList"></a>
