@@ -516,7 +516,10 @@ API地址: https://github.com/shiningwhite/m73_api
               "email": "邮箱",
               "nickname": "昵称",
               "name": "真实姓名",
-              "role": "角色",
+              "role": {
+              	"id": 1,
+              	"option": "管理员"
+              },
               "status": "状态",  // true or false
               "createTime": "创建时间"
             },
@@ -545,7 +548,10 @@ API地址: https://github.com/shiningwhite/m73_api
               "email": "邮箱",
               "nickname": "昵称",
               "name": "真实姓名",
-              "role": "角色",
+              "role": {
+              	"id": 1,
+              	"option": "管理员"
+              },
               "status": "状态",  // true or false
               "createTime": "创建时间"
           }
@@ -572,11 +578,14 @@ API地址: https://github.com/shiningwhite/m73_api
               "email": "邮箱",
               "nickname": "昵称",
               "name": "真实姓名",
-              "role": "角色",
+              "role": {
+              	"id": 1,
+              	"option": "管理员"
+              },
               "status": "状态",  // true or false
               "create"Time": "创建时间"
           }
-        }   
+        }
         
 <a name="delUser"></a>        
 ###删除用户
