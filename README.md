@@ -793,17 +793,17 @@ API地址: https://github.com/shiningwhite/m73_api
 ######出参：
     "result":
         {
-          "firstAuth": [
+          "auth": [
           {
             "id": 1,
             "name": "审核管理",
             "field": "对应数据库字段",
-            "secondAuth": [
+            "children": [
              {
                "id": "001",
                "name": "飞小编审核",
                "field": "对应数据库字段",
-               "thirdAuth": [
+               "children": [
               {
                  "id": "1",
                  "name": "景点审核",
