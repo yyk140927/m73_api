@@ -46,7 +46,7 @@ API地址: https://github.com/shiningwhite/m73_api
             + [新增角色](#addRole)
             + [编辑角色](#setRole)
             + [删除角色](#delRole)
-            + [权限列表](#authList)
+            + [权限列表](#authlist)
             + [验证权限](#verifyAuth)
         + 搜索相关
             + [飞小编搜索条件](#applySearchTerm)
@@ -615,7 +615,7 @@ API地址: https://github.com/shiningwhite/m73_api
               "name": "，角色名称",
               "desc": "描述",
               "userlist": ["penny", "pp", " ... "],  //  用户列表
-              "authList": [
+              "authlist": [
                {
                  "id": 1,
                  "name": "审核管理",
@@ -666,7 +666,7 @@ API地址: https://github.com/shiningwhite/m73_api
               "name": "，角色名称",
               "desc": "描述",
               "userlist": ["penny", "pp", " ... "],  //  用户列表
-              "authList": [
+              "authlist": [
                {
                  "id": 1,
                  "name": "审核管理",
@@ -709,7 +709,7 @@ API地址: https://github.com/shiningwhite/m73_api
               "name": "，角色名称",
               "desc": "描述",
               "userlist": ["penny", "pp", " ... "],  //  用户列表
-               "authList": [
+               "authlist": [
                {
                  "id": 1,
                  "name": "审核管理",
@@ -741,7 +741,7 @@ API地址: https://github.com/shiningwhite/m73_api
           "operation": 1
         } 
         
-<a name="authList"></a>        
+<a name="authlist"></a>        
 ###权限列表
 #### GET  /access/lists
 
