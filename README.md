@@ -606,6 +606,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：  
                 page                     Int  分页
+                id                       Int  角色ID
 ######出参：
     "result":
         {
