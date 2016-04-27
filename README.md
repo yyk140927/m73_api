@@ -615,17 +615,17 @@ API地址: https://github.com/shiningwhite/m73_api
               "name": "，角色名称",
               "desc": "描述",
               "userlist": ["penny", "pp", " ... "],  //  用户列表
-               "firstAuth": [
+              "authList": [
                {
                  "id": 1,
                  "name": "审核管理",
                  "field": "对应数据库字段",
-                 "secondAuth": [
+                 "children": [
                  {
                    "id": "001",
                    "name": "飞小编审核",
                    "field": "对应数据库字段",
-                   "thirdAuth": [
+                   "children": [
                     {
                       "id": "1",
                       "name": "景点审核",
@@ -666,7 +666,7 @@ API地址: https://github.com/shiningwhite/m73_api
               "name": "，角色名称",
               "desc": "描述",
               "userlist": ["penny", "pp", " ... "],  //  用户列表
-              "authlist": [
+              "authList": [
                {
                  "id": 1,
                  "name": "审核管理",
@@ -730,17 +730,17 @@ API地址: https://github.com/shiningwhite/m73_api
               "name": "，角色名称",
               "desc": "描述",
               "userlist": ["penny", "pp", " ... "],  //  用户列表
-               "firstAuth": [
+               "authList": [
                {
                  "id": 1,
                  "name": "审核管理",
                  "field": "对应数据库字段",
-                 "secondAuth": [
+                 "children": [
                  {
                    "id": "001",
                    "name": "飞小编审核",
                    "field": "对应数据库字段",
-                   "thirdAuth": [
+                   "children": [
                     {
                       "id": "1",
                       "name": "景点审核",
