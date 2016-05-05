@@ -47,6 +47,8 @@ API地址: https://github.com/shiningwhite/m73_api
             + [编辑角色](#setRole)
             + [删除角色](#delRole)
             + [权限列表](#authlist)
+            + [新增&修改权限](#accessset)
+            + [删除权限](#accessdel)
             + [验证权限](#verifyAuth)
         + 搜索相关
             + [飞小编搜索条件](#applySearchTerm)
@@ -777,6 +779,38 @@ API地址: https://github.com/shiningwhite/m73_api
       { ... }
      ]
     }
+    
+<a name="accessset"></a>
+#### 新增&修改权限
+#### POST /access/set
+######入参：
+            *field                         String 对应数据库字段
+            *level                         Int    级别 0|1|2
+            *parentId                      Int    父ID
+            name                           String 备注
+            id                             Int    如果是修改，就必须有ID
+            
+######出参：
+    "result":
+        {
+            "operation":1,                    //操作成功返回1
+            "id":22                           //返回插入的ID
+        }
+
+
+<a name="accessdel"></a>
+#### 删除权限
+#### POST /access/del
+######入参：
+            * id                        Int  权限ID
+            * level                     Int  级别 0|1|2
+
+######出参：
+    "result":
+        {
+            "operation":1                    //删除成功
+        }  
+        
  <a name="verifyAuth"></a>
 ###验证权限
 #### GET  /auth/verifyAuth
@@ -787,7 +821,7 @@ API地址: https://github.com/shiningwhite/m73_api
     "result":
         {
             "operation": 1  //验证成功，否则errorCode提示错误消息
-        }                  
+        }                          
                 
 <a name="applySearchTerm"></a>
 ###飞小编搜索条件
