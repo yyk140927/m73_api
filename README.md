@@ -4,7 +4,7 @@ Feekr后台管理系统API Document
 
 Author: shining@feekr.com
 
-Version: 2.0.0
+Version: 2.0.1
 
 Description:Feekr后台管理系统接口
 
@@ -14,7 +14,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ---
 
-#### V2.0.0
+#### V2.0.1
 + 目录
 	+ [文档描述](#description)
 	+ [接口详情](#detail)
@@ -164,7 +164,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			* oldPwd				  String	原密码
 			* newPwd				  String	新密码
-			* repeatPwd			      String	确认密码
+			* repeatPwd				  String	确认密码
 			
 ######出参：
 	"result":
@@ -394,7 +394,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			* name					  String  名称
 			* code					  String  数据库字段
 			* width					  String  宽度
-			* height			      String  高度
+			* height				  String  高度
 			* status				  Boolean 状态 // true 启用 false 停用
 ######出参：
 	"result":
@@ -559,10 +559,10 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			   * role					String 角色
 			   * name					String 姓名
-			   * email				    String 邮件
+			   * email					String 邮件
 			   * nickname				String 昵称
 				 pwd					String 密码
-				 repeatPwd			    String 重复密码
+				 repeatPwd				String 重复密码
 
 ######出参：
 	"result":
@@ -809,8 +809,8 @@ API地址: https://github.com/shiningwhite/m73_api
 			*field						 String 对应数据库字段
 			*level						 Int	级别 0|1|2
 			*parentId					 Int	父ID
-			name						 String 备注
-			id							 Int	如果是修改，就必须有ID
+			 name						 String 备注
+			 id							 Int	如果是修改，就必须有ID
 			
 ######出参：
 	"result":
@@ -824,7 +824,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### 删除权限
 #### POST /access/del
 ######入参：
-			* id				     Int  权限ID
+			* id					 Int  权限ID
 			* level					 Int  级别 0|1|2
 
 ######出参：
@@ -1122,7 +1122,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 		  
-			 sendStatus				String 投递状态
+			 sendStatus				  String 投递状态
 			 username				  String 飞小编用户名
 			 page					  Int  分页   
 
@@ -1218,8 +1218,8 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /officialColumn/lists
 
 ######入参：
-			   sort                Int 0: 文章数, 1:订阅数, 2:浏览数, 3:创建时间, 4:文章更新时间, 降序
-			   page                Int 分页
+			   sort				Int 0: 文章数, 1:订阅数, 2:浏览数, 3:创建时间, 4:文章更新时间, 降序
+			   page				Int 分页
 			   
 ######出参：
 	"result":
@@ -1227,7 +1227,8 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "list": [
 			{
 			  "id": ID,
-			  "cover": "封面图片",
+			  "picDomain": "图片domain",
+			  "picUrl": "封面图片路径",
 			  "name": "名称",
 			  "desc": "介绍",
 			  "articleCount": "文章数",
@@ -1245,17 +1246,18 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /officialColumn/lists
 
 ######入参：
-			   *name           String 名称 
-			   *desc           String 介绍
-			   *cover          String 封面
-			   *id             String ID
+			   *name		   String 名称 
+			   *desc		   String 介绍
+			   *picUrl		   String 封面
+			   *id			   String ID
 			   
 ######出参：
 	"result":
 		{
 		  "item": {
 			  "id": ID,
-			  "cover": "封面图片",
+			  "picDomain": "图片domain",
+			  "picUrl": "封面图片路径",
 			  "name": "名称",
 			  "desc": "介绍",
 			  "articleCount": "文章数",
@@ -1271,16 +1273,17 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /officialColumn/set
 
 ######入参：
-			   *name           String 名称 
-			   *desc           String 介绍
-			   *cover          String 封面
+			   *name		   String 名称 
+			   *desc		   String 介绍
+			   *picUrl		 String 封面
 			   
 ######出参：
 	"result":
 		{
 		  "item": {
 			  "id": ID,
-			  "cover": "封面图片",
+			  "picDomain": "图片domain",
+			  "picUrl": "封面图片路径",
 			  "name": "名称",
 			  "desc": "介绍",
 			  "articleCount": "文章数",
@@ -1297,7 +1300,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /officialColumn/del
 
 ######入参：
-			   *id              String 栏目ID
+			   *id			  String 栏目ID
 			   
 ######出参：
 	"result":
@@ -1310,9 +1313,9 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /specialColumn/lists
 
 ######入参：
-			   nickname            String 用户名
-			   sort                Int 0:文章数, 1:订阅数, 2:浏览数, 3:创建时间, 4:文章更新时间, 降序
-			   page                Int 分页
+			   nickname			String 用户名
+			   sort				Int 0:文章数, 1:订阅数, 2:浏览数, 3:创建时间, 4:文章更新时间, 降序
+			   page				Int 分页
 			   
 ######出参：
 	"result":
@@ -1320,7 +1323,8 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "list": [
 			{
 			  "id": ID,
-			  "cover": "封面图片",
+			  "picDomain": "图片domain",
+			  "picUrl": "封面图片路径",
 			  "nickname": "用户名"
 			  "name": "姓名",
 			  "desc": "介绍",
@@ -1329,8 +1333,8 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "readCount": "浏览数",
 			  "createTime": "创建时间",
 			  "updateTime": "文章更新时间",
-			  "phoneNUm": "手机号码",
-			  "QQ": "qq号码",
+			  "cellphone": "手机号码",
+			  "qq": "qq号码",
 			  "weixin": "微信",
 			  "remark": "备注"
 			},
@@ -1345,14 +1349,14 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			 
-			   *id             Strinf ID
-			   *desc           String 介绍
-			   *cover          String 封面
-			    name           String 名称 
-			    phoneNum       Int 手机号码
-			    QQ             Int qq号码
-			    weixin         String 微信
-			    remark         String 备注
+			   *id			 Strinf ID
+			   *desc		   String 介绍
+			   *picUrl		 String 封面
+				name		   String 名称 
+				cellphone	   Int 手机号码
+				qq			 Int qq号码
+				weixin		 String 微信
+				remark		 String 备注
 			   
 ######出参：
 	"result":
@@ -1360,7 +1364,8 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "item": {
 			  "id": ID,
 			  "userId": "用户ID",
-			  "cover": "封面图片",
+			  "picDomain": "图片domain",
+			  "picUrl": "封面图片路径",
 			  "nickname": "用户名"
 			  "name": "姓名",
 			  "desc": "介绍",
@@ -1369,8 +1374,8 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "readCount": "浏览数",
 			  "createTime": "创建时间",
 			  "updateTime": "文章更新时间",
-			  "phoneNum": "手机号码",
-			  "QQ": "qq号码",
+			  "cellphone": "手机号码",
+			  "qq": "qq号码",
 			  "weixin": "微信",
 			  "remark": "备注"
 			}
@@ -1381,7 +1386,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			 
-			   *id             String ID
+			   *id			 String ID
 			   
 ######出参：
 	"result":
@@ -1394,14 +1399,14 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /article/lists
 
 ######入参：
-			   status              String 状态：有效，删除...
-			   sort                Int 2:浏览数, 5:喜欢书, 6: 评论数 降序
-			   page                Int 分页
-			   producer            String 产生
-			   tag                 String 标签
-			   title               String 标题
-			   officialColumn      String 官方栏目
-			   spColumn            String 专栏作者
+			   status			  String 状态：有效，删除...
+			   sort				Int 2:浏览数, 5:喜欢书, 6: 评论数 降序
+			   page				Int 分页
+			   producer			String 产生
+			   tag				 String 标签
+			   title			   String 标题
+			   officialColumn	  String 官方栏目
+			   spColumn			String 专栏作者
 			   
 ######出参：
 	"result":
@@ -1430,7 +1435,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /article/detail
 
 ######入参：
-		    *id           String ID
+			*id		   String ID
 ######出参:
 	"result":
 		{
@@ -1440,38 +1445,42 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "title": "标题"
 			  "from": "来源",
 			  "url": "来源地址",
-			  "editor": "田田",
+			  "editor": {
+				id: 1,
+				name: "田田"
+			  },
 			  "status": [{
-			    "id": 1,
-			    "option": "有效",
-			    "isChecked": 1  //  选中
+				"id": 1,
+				"option": "有效",
+				"isChecked": 1  //  选中
 			  },
 			  {
-			    "id": 2,
-			    "option": "待审核"
+				"id": 2,
+				"option": "待审核"
 			  },{
-			    "id": 3,
-			    "option": "拒绝"
+				"id": 3,
+				"option": "拒绝"
 			  }, {
-			    "id": 0,
-			    "option": "删除"
+				"id": 0,
+				"option": "删除"
 			  }],
 			  "officialColumn": [
-			    {
-			      "id": 1,
-			      "option": "大咖玩小众",
-			      "isChecked": 1  //  选中
-			    },{ ... }
+				{
+				  "id": 1,
+				  "option": "大咖玩小众",
+				  "isChecked": 1  //  选中
+				},{ ... }
 			  ],
 			  "specialColumn": "专栏作者",
 			  "tag": [
-			    {
-			      "id": 1,
-			      "option": "玩小众",
-			      "isChecked": 1  //  选中
-			    },{ ... }
+				{
+				  "id": 1,
+				  "option": "玩小众",
+				  "isChecked": 1  //  选中
+				},{ ... }
 			  ],
-			  "cover": "封面图片",
+			  "picDomain": "图片domain",
+			  "picUrl": "封面图片路径",
 			  "desc": "简介",
 			  "content": "文章内容"
 			}
@@ -1482,21 +1491,21 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /article/set
 
 ######入参：
-			 *time                 String
-			 *title                String
-			 *cover                String
-			 *content              String		
-			  from                 String
-			  url                  String
-			  editor               String
-			  statusId             String
-			  officialColumn       Array
-			  specialColumn        String
-			  tag                  Array
-			  desc                 String
+			 *time				 String
+			 *title				 String
+			 *picUrl			 String
+			 *content			 String		
+			  from				 String
+			  url				 String
+			  editor			 String
+			  statusId			 String
+			  officialColumn	 Array
+			  specialColumn		 String
+			  tag				 Array
+			  desc				 String
 			 
 ######出参:	
-     "result":
+	 "result":
 		{
 		  "operation": 1
 		}
@@ -1506,44 +1515,44 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /article/set
 
 ######入参：
-             *id                   String
-			 *time                 String
-			 *title                String
-			 *cover                String
-			 *content              String		
-			  from                 String
-			  url                  String
-			  editor               String
-			  statusId             String
-			  officialColumn       Array
-			  specialColumn        String
-			  tag                  Array
-			  desc                 String
+			 *id				   String
+			 *time				   String
+			 *title				   String
+			 *picUrl			   String
+			 *content			   String		
+			  from				   String
+			  url				   String
+			  editor			   String
+			  statusId			   String
+			  officialColumn	   Array
+			  specialColumn		   String
+			  tag				   Array
+			  desc				   String
 ######出参:
-     "result":
+	 "result":
 		{
 		  "operation": 1
 		}
 
 <a name="spColumn"></a>
 ###
-#### GET  /specialColumn/author?title={title}
+#### GET  /specialColumn/author?name={name}
 
 ######入参：
-             *title       //  用户名
+			 *name	   //  用户名
 			 
 ######出参:
-     "result":
+	 "result":
 		{
 		  "list": [
-		    {
-		      "id": 1,
-		      option: "夏小暖"
-		    },
-		     {
-		      "id": 2,
-		      option: "夏雨天"
-		    }
+			{
+			  "id": 1,
+			  "option": "夏小暖"
+			},
+			 {
+			  "id": 2,
+			  "option": "夏雨天"
+			}
 		  ]
 		}
 		
@@ -1552,10 +1561,10 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /wxarticle/lists
 
 ######入参：
-		title              String  标题	 
+		title			  String  标题	 
 			   
 ######出参:
-     "result":
+	 "result":
 		{
 		  "list": [
 			{
@@ -1576,16 +1585,17 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /wxarticle/detail
 
 ######入参：
-			*id          String ID 
+			id		  String ID // 传ID为编辑，不传为新增
 			   
 ######出参:
-    "result":
+	"result":
 		{
 		  "item": {
 			  "id": ID,
 			  "title": "标题"
 			  "url": "来源地址",
-			  "cover": "封面图片",
+			  "picDomain": "图片domain",
+			  "picUrl": "封面图片路径",
 			  "desc": "简介",
 			  "content": "文章内容"
 			}
@@ -1596,10 +1606,10 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /wxarticle/update
 
 ######入参：
-			*id          String ID  
+			*id		  String ID  
 			   
 ######出参:
-     "result":
+	 "result":
 		{
 		  "operation": 1
 		}
@@ -1609,10 +1619,10 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /daily/lists
 
 ######入参：
-			   status              String 状态
-			   title               String 标题
-			   sort                Int 0:文章数, 1:订阅数, 2:浏览数, 3:创建时间, 4:文章更新时间, 降序
-			   page                Int 分页
+			   status			  String 状态
+			   title			   String 标题
+			   sort				Int 0:文章数, 1:订阅数, 2:浏览数, 3:创建时间, 4:文章更新时间, 降序
+			   page				Int 分页
 			   
 ######出参：
 	"result":
@@ -1641,11 +1651,11 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /daily/set
 
 ######入参：
-			   *id                     String  ID
-			   *time                   String  推荐日期
-			   *articleId              String  推荐文章ID
-			   *rank                   Int  排序
-         
+			   *id					  String  ID
+			   *time				  String  推荐日期
+			   *articleId			  String  推荐文章ID
+			   *rank				  Int  排序
+		 
 ######出参：
 	"result":
 		{
@@ -1669,10 +1679,10 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /daily/set
 
 ######入参：
-			   *time                   String  推荐日期
-			   *articleId              String  推荐文章ID
-			   *rank                   Int  排序
-         
+			   *time				   String  推荐日期
+			   *articleId			   String  推荐文章ID
+			   *rank				   Int  排序
+		 
 ######出参：
 	"result":
 		{
