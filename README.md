@@ -1275,7 +1275,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			   *name		   String 名称 
 			   *desc		   String 介绍
-			   *picUrl		 String 封面
+			   *picUrl		   String 封面
 			   
 ######出参：
 	"result":
@@ -1349,14 +1349,14 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			 
-			   *id			 Strinf ID
-			   *desc		   String 介绍
-			   *picUrl		 String 封面
-				name		   String 名称 
-				cellphone	   Int 手机号码
-				qq			 Int qq号码
-				weixin		 String 微信
-				remark		 String 备注
+			   *id			  Strinf ID
+			   *desc		  String 介绍
+			   *picUrl		  String 封面
+				name		  String 名称 
+				cellphone	  Int 手机号码
+				qq			  Int qq号码
+				weixin		  String 微信
+				remark		  String 备注
 			   
 ######出参：
 	"result":
@@ -1400,13 +1400,13 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			   status			  String 状态：有效，删除...
-			   sort				Int 2:浏览数, 5:喜欢书, 6: 评论数 降序
-			   page				Int 分页
-			   producer			String 产生
-			   tag				 String 标签
-			   title			   String 标题
+			   sort				  Int 2:浏览数, 5:喜欢书, 6: 评论数 降序
+			   page				  Int 分页
+			   producer			  String 产生
+			   tag				  String 标签
+			   title			  String 标题
 			   officialColumn	  String 官方栏目
-			   spColumn			String 专栏作者
+			   spColumn			  String 专栏作者
 			   
 ######出参：
 	"result":
@@ -1619,8 +1619,8 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /daily/lists
 
 ######入参：
-			   status			  String 状态
-			   title			   String 标题
+			   status			String 状态
+			   title			String 标题
 			   sort				Int 0:文章数, 1:订阅数, 2:浏览数, 3:创建时间, 4:文章更新时间, 降序
 			   page				Int 分页
 			   
