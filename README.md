@@ -1236,6 +1236,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "readCount": "浏览数",
 			  "createTime": "创建时间",
 			  "updateTime": "文章更新时间"
+			  "avatarUrl": "头像相对路径"
 			},
 			{ ... }			
 		  ],
@@ -1249,6 +1250,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   *name		   String 名称 
 			   *desc		   String 介绍
 			   *picUrl		   String 封面
+			   *avatarUrl	   String 头像
 			   *id			   String ID
 			   
 ######出参：
@@ -1258,6 +1260,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "id": ID,
 			  "picDomain": "图片domain",
 			  "picUrl": "封面图片路径",
+			  "avatarUrl": "头像相对路径",
 			  "name": "名称",
 			  "desc": "介绍",
 			  "articleCount": "文章数",
@@ -1276,6 +1279,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   *name		   String 名称 
 			   *desc		   String 介绍
 			   *picUrl		   String 封面
+			   *avatarUrl	   String 头像
 			   
 ######出参：
 	"result":
@@ -1284,6 +1288,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "id": ID,
 			  "picDomain": "图片domain",
 			  "picUrl": "封面图片路径",
+			  "avatarUrl": "头像相对路径",
 			  "name": "名称",
 			  "desc": "介绍",
 			  "articleCount": "文章数",
@@ -1296,7 +1301,6 @@ API地址: https://github.com/shiningwhite/m73_api
 		
 <a name="delOfficialSection"></a>
 ###删除官方栏目
-<a name="specialAuthorList"></a>
 #### POST  /officialColumn/del
 
 ######入参：
