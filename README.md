@@ -1244,7 +1244,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		}
 <a name="setOfficialSection"></a>
 ###修改官方栏目
-#### POST  /officialColumn/lists
+#### POST  /officialColumn/set
 
 ######入参：
 			   *name		   String 名称 
