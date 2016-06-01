@@ -1227,8 +1227,10 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "list": [
 			{
 			  "id": ID,
-			  "picDomain": "图片domain",
-			  "picUrl": "封面图片路径",
+			  "coverDomain": "封面domain",
+			  "coverUrl": "封面图片路径",
+			  "avatarDomain": "头像domain",
+			  "avatarUrl": "头像相对路径",
 			  "name": "名称",
 			  "desc": "介绍",
 			  "articleCount": "文章数",
@@ -1236,7 +1238,6 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "readCount": "浏览数",
 			  "createTime": "创建时间",
 			  "updateTime": "文章更新时间"
-			  "avatarUrl": "头像相对路径"
 			},
 			{ ... }			
 		  ],
@@ -1244,12 +1245,12 @@ API地址: https://github.com/shiningwhite/m73_api
 		}
 <a name="setOfficialSection"></a>
 ###修改官方栏目
-#### POST  /officialColumn/set
+#### POST  /officialColumn/set=
 
 ######入参：
 			   *name		   String 名称 
 			   *desc		   String 介绍
-			   *picUrl		   String 封面
+			   *coverUrl	   String 封面
 			   *avatarUrl	   String 头像
 			   *id			   String ID
 			   
@@ -1258,8 +1259,9 @@ API地址: https://github.com/shiningwhite/m73_api
 		{
 		  "item": {
 			  "id": ID,
-			  "picDomain": "图片domain",
-			  "picUrl": "封面图片路径",
+			  "coverDomain": "封面domain",
+			  "coverUrl": "封面图片路径",
+			  "avatarDomain": "头像domain",
 			  "avatarUrl": "头像相对路径",
 			  "name": "名称",
 			  "desc": "介绍",
@@ -1278,7 +1280,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			   *name		   String 名称 
 			   *desc		   String 介绍
-			   *picUrl		   String 封面
+			   *coverUrl	   String 封面
 			   *avatarUrl	   String 头像
 			   
 ######出参：
@@ -1286,8 +1288,9 @@ API地址: https://github.com/shiningwhite/m73_api
 		{
 		  "item": {
 			  "id": ID,
-			  "picDomain": "图片domain",
-			  "picUrl": "封面图片路径",
+			  "coverDomain": "封面domain",
+			  "coverUrl": "封面图片路径",
+			  "avatarDomain": "头像domain",
 			  "avatarUrl": "头像相对路径",
 			  "name": "名称",
 			  "desc": "介绍",
@@ -1327,8 +1330,8 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "list": [
 			{
 			  "id": ID,
-			  "picDomain": "图片domain",
-			  "picUrl": "封面图片路径",
+			  "coverDomain": "封面domain",
+			  "coverUrl": "封面图片路径",
 			  "nickname": "用户名"
 			  "name": "姓名",
 			  "desc": "介绍",
@@ -1355,7 +1358,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			 
 			   *id			  Strinf ID
 			   *desc		  String 介绍
-			   *picUrl		  String 封面
+			   *coverUrl	  String 封面
 				name		  String 名称 
 				cellphone	  Int 手机号码
 				qq			  Int qq号码
@@ -1368,8 +1371,8 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "item": {
 			  "id": ID,
 			  "userId": "用户ID",
-			  "picDomain": "图片domain",
-			  "picUrl": "封面图片路径",
+			  "coverDomain": "封面domain",
+			  "coverUrl": "封面图片路径",
 			  "nickname": "用户名"
 			  "name": "姓名",
 			  "desc": "介绍",
@@ -1474,8 +1477,8 @@ API地址: https://github.com/shiningwhite/m73_api
 				},{ ... }
 			  ],
 			  "specialColumn": {
-			    "id": 1,
-			    "option": "专栏作者"
+				"id": 1,
+				"option": "专栏作者"
 			  },
 			  "tag": [
 				{
@@ -1484,8 +1487,8 @@ API地址: https://github.com/shiningwhite/m73_api
 				  "isChecked": 1  //  选中
 				},{ ... }
 			  ],
-			  "picDomain": "图片domain",
-			  "picUrl": "封面图片路径",
+			  "coverDomain": "封面domain",
+			  "coverUrl": "封面图片路径",
 			  "desc": "简介",
 			  "content": "文章内容"
 			}
@@ -1498,7 +1501,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			 *time				 String
 			 *title				 String
-			 *picUrl			 String
+			 *coverUrl			 String
 			 *content			 String		
 			  from				 String
 			  url				 String
@@ -1523,7 +1526,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			 *id				   String
 			 *time				   String
 			 *title				   String
-			 *picUrl			   String
+			 *coverUrl			   String
 			 *content			   String		
 			  from				   String
 			  url				   String
@@ -1599,8 +1602,8 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "id": ID,
 			  "title": "标题"
 			  "url": "来源地址",
-			  "picDomain": "图片domain",
-			  "picUrl": "封面图片路径",
+			  "coverDomain": "封面domain",
+			  "coverUrl": "封面图片路径",
 			  "desc": "简介",
 			  "content": "文章内容"
 			}
