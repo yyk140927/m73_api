@@ -1445,14 +1445,12 @@ API地址: https://github.com/shiningwhite/m73_api
 		{
 		  "item": {
 			  "id": ID,
+			  "wxId": "微信文章ID"
 			  "time": "时间",
 			  "title": "标题"
 			  "from": "来源",
 			  "url": "来源地址",
-			  "editor": {
-				id: 1,
-				name: "田田"
-			  },
+			  "editor": "田田",
 			  "status": [{
 				"id": 1,
 				"option": "有效",
@@ -1475,7 +1473,10 @@ API地址: https://github.com/shiningwhite/m73_api
 				  "isChecked": 1  //  选中
 				},{ ... }
 			  ],
-			  "specialColumn": "专栏作者",
+			  "specialColumn": {
+			    "id": 1,
+			    "option": "专栏作者"
+			  },
 			  "tag": [
 				{
 				  "id": 1,
