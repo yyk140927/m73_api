@@ -1502,16 +1502,16 @@ API地址: https://github.com/shiningwhite/m73_api
 			 *time				 String
 			 *title				 String
 			 *coverUrl			 String
-			 *content			 String		
+			 *content			 String	
 			  from				 String
 			  url				 String
 			  editor			 String
-			  statusId			 String
+			  status			 Array
 			  officialColumn	 Array
-			  specialColumn		 String
+			  specialColumn		 Array
 			  tag				 Array
 			  desc				 String
-			 
+			  wxId              String
 ######出参:	
 	 "result":
 		{
@@ -1531,11 +1531,12 @@ API地址: https://github.com/shiningwhite/m73_api
 			  from				   String
 			  url				   String
 			  editor			   String
-			  statusId			   String
+			  status			   Array
 			  officialColumn	   Array
-			  specialColumn		   String
+			  specialColumn		   Array
 			  tag				   Array
 			  desc				   String
+			  wxId                String
 ######出参:
 	 "result":
 		{
