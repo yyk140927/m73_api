@@ -1426,7 +1426,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "officialColumn": "官方栏目",
 			  "spColumn": "专栏作者",
 			  "tag": ["爱文艺", "好酒店"],
-			  "status": 0, //  1:有效 2:待审核 3:拒绝 0:删除,
+			  "status": 0, //  0.待审核 1有效 2拒绝 3删除
 			  "producer": 1 //  1:系统 2:用户
 			  "readCount": "阅读数", 
 			  "likeCount": "喜欢数",
