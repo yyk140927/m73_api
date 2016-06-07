@@ -92,6 +92,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			+ [每日文章推荐列表](#dailyList)
 			+ [编辑每日文章推荐](#setDaily)
 			+ [新增每日文章推荐](#addDaily)
+			+ [新增每日文章推荐状态修改](#addDailyStatus)
 	
 <a name="description"></a>
 ##文档描述
@@ -1245,7 +1246,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		}
 <a name="setOfficialSection"></a>
 ###修改官方栏目
-#### POST  /officialColumn/set=
+#### POST  /officialColumn/set
 
 ######入参：
 			   *name		   String 名称 
@@ -1709,3 +1710,19 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "updateTime": "更新时间"
 			}
 		}
+		
+<a name="addDailyStatus"></a>
+###新增每日文章推荐状态修改
+#### POST  /daily/status
+
+######入参：
+
+			   *articleId			   String  推荐文章ID
+
+		 
+######出参：
+	"result":
+		{
+		   "operation": 1
+		}
+				
