@@ -1571,7 +1571,8 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /wxarticle/lists
 
 ######入参：
-		title			  String  标题	 
+		title			  String  标题
+		sort             Int //排序降序  7:引用次数 
 			   
 ######出参:
 	 "result":
