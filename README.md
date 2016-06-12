@@ -1596,13 +1596,13 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /wxarticle/detail
 
 ######入参：
-			id		  String ID // 传ID为编辑，不传为新增
+			wxId		  String ID // 微信文章ID
 			   
 ######出参:
 	"result":
 		{
 		  "item": {
-			  "id": ID,
+			  "wxId": ID,
 			  "title": "标题"
 			  "url": "来源地址",
 			  "coverDomain": "封面domain",
