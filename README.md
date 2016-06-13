@@ -1533,7 +1533,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  url				   String
 			  editor			   String
 			  status			   Array
-			  officialColumn	   Array
+			  officialColumn	   Object
 			  specialColumn		   Array
 			  tag				   Array
 			  desc				   String
