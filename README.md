@@ -1557,11 +1557,11 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "list": [
 			{
 			  "id": 1,
-			  "option": "夏小暖"
+			  "text": "夏小暖"
 			},
 			 {
 			  "id": 2,
-			  "option": "夏雨天"
+			  "text": "夏雨天"
 			}
 		  ]
 		}
