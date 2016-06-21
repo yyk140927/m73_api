@@ -4,7 +4,7 @@ Feekr后台管理系统API Document
 
 Author: shining@feekr.com
 
-Version: 2.0.1
+Version: 2.0.2
 
 Description:Feekr后台管理系统接口
 
@@ -14,7 +14,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ---
 
-#### V2.0.1
+#### V2.0.2
 + 目录
 	+ [文档描述](#description)
 	+ [接口详情](#detail)
@@ -58,6 +58,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			+ [玩法商品搜索条件](#awardTerm)
 			+ [每日文章推荐搜索条件](#dailyTerm)
 			+ [文章管理搜索条件](#articleTerm)
+			+ [用户管理搜索条件](#userTerm)
 		+ 二维码相关
 			+ [生成二维码](#generateCode)
 		+ 导航相关
@@ -93,6 +94,13 @@ API地址: https://github.com/shiningwhite/m73_api
 			+ [编辑每日文章推荐](#setDaily)
 			+ [新增每日文章推荐](#addDaily)
 			+ [新增每日文章推荐状态修改](#addDailyStatus)
+		+ 用户管理
+			+ [用户列表](#userList)
+			+ [添加用户](#userAdd)
+			+ [编辑用户](#userSet)
+			+ [用户启用状态修改](#userStatus)
+			+ [反馈列表](#feedbackList)
+			+ [反馈备注](#feedbackSet)
 	
 <a name="description"></a>
 ##文档描述
@@ -1512,7 +1520,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  specialColumn		 Array
 			  tag				 Array
 			  desc				 String
-			  wxId              String
+			  wxId			  String
 ######出参:	
 	 "result":
 		{
@@ -1537,7 +1545,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  specialColumn		   Array
 			  tag				   Array
 			  desc				   String
-			  wxId                String
+			  wxId				String
 ######出参:
 	 "result":
 		{
@@ -1572,7 +1580,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 		title			  String  标题
-		sort             Int //排序降序  7:引用次数 
+		sort			 Int //排序降序  7:引用次数 
 			   
 ######出参:
 	 "result":
@@ -1726,4 +1734,130 @@ API地址: https://github.com/shiningwhite/m73_api
 		{
 		   "operation": 1
 		}
-				
+		
+<a name="userList"></a>
+###用户列表
+#### GET  /user/lists
+
+######入参：
+			   sort				  Int 2:浏览数, 5:喜欢书, 6: 评论数 降序
+			   page				  Int 分页
+			   status			  Int 状态
+			   role				  Int 身份
+			   nickname			  String 昵称
+			   
+######出参：
+	"result":
+		{
+		  "list": [
+			{
+			  "id": ID,
+			  "regTime": "注册时间",
+			  "lastLogin": "上次登录"
+			  "avatarDomain": "头像domain",
+			  "avatarUrl": "头像相对路径",
+			  "status": 0, //  0:停用， 1:启用
+			  "source": "来源", 
+			  "account": "帐号",
+			  "loginCount": "登录数",
+			  "role": "角色",
+			  "playCount": "玩法"
+			  "themeCount": "主题",
+			  "articleCount": "文章",
+			  "subscribCount": "关注",
+			  "fansCount": "粉丝"
+			},
+			{ ... }			
+		  ],
+		  "pageTotal": "数量"
+		}
+		
+<a name="userAdd"></a>
+###新增用户
+#### GET  /user/set
+
+######入参：
+			  account	    Int	 手机账号
+			  password	  	String  密码
+			  confirmPwd	String  确认密码
+			  role		    Int	 角色ID
+			  avatarUrl	    String  头像相对路径
+			  nickname	    String  昵称	
+			   
+######出参：
+	"result":
+		{
+		  "operation": 1
+		}
+		
+<a name="userSet"></a>
+###编辑用户
+#### GET  /user/set
+
+######入参：
+			  id            Int 用户ID
+			  account	    Int	 手机账号
+			  password	  	String  密码
+			  confirmPwd	String  确认密码
+			  role		    Int	 角色ID
+			  avatarUrl	    String  头像相对路径
+			  nickname	    String  昵称	
+			   
+######出参：
+	"result":
+		{
+		  "operation": 1
+		}
+		
+<a name="userStatus"></a>
+###用户启用状态修改
+#### GET  /user/set
+
+######入参：
+			  status            Int 0:停用 1：启用
+			   
+######出参：
+	"result":
+		{
+		  "operation": 1
+		}
+		
+<a name="feedbackList"></a>
+###反馈列表
+#### GET  /feedback/lists
+
+######入参：
+			 page            Int 分页
+			   
+######出参：
+	"result":
+		{
+		  "list": [
+			{
+			  "id": "反馈ID",
+			  "nickname": "用户昵称",
+			  "content": "内容"
+			  "contact": "联系方式",
+			  "platform": "平台",
+			  "os": "操作系统"
+			  "time": "时间", 
+			  "remark": "备注"
+			},
+			{ ... }			
+		  ],
+		  "pageTotal": "数量"
+		}
+		
+<a name="feedbackSet"></a>
+###反馈备注
+#### GET  /feedback/set
+
+######入参：
+			  remark            String 备注
+			  id                Int ID
+			   
+######出参：
+	"result":
+		{
+		  "operation": 1
+		}										
