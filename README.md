@@ -58,7 +58,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			+ [玩法商品搜索条件](#awardTerm)
 			+ [每日文章推荐搜索条件](#dailyTerm)
 			+ [文章管理搜索条件](#articleTerm)
-			+ [用户管理搜索条件](#userTerm)
+			+ [注册用户搜索条件](#userTerm)
 		+ 二维码相关
 			+ [生成二维码](#generateCode)
 		+ 导航相关
@@ -95,10 +95,10 @@ API地址: https://github.com/shiningwhite/m73_api
 			+ [新增每日文章推荐](#addDaily)
 			+ [新增每日文章推荐状态修改](#addDailyStatus)
 		+ 用户管理
-			+ [用户列表](#userList)
-			+ [添加用户](#userAdd)
-			+ [编辑用户](#userSet)
-			+ [用户启用状态修改](#userStatus)
+			+ [用户列表](#regUserList)
+			+ [添加用户](#regUserAdd)
+			+ [编辑用户](#regUserSet)
+			+ [用户启用状态修改](#regUserStatus)
 			+ [反馈列表](#feedbackList)
 			+ [反馈备注](#feedbackSet)
 	
@@ -1017,6 +1017,31 @@ API地址: https://github.com/shiningwhite/m73_api
 			  },
 			  { ... }
 			]
+		}
+		
+<a name="userTerm"></a>
+###注册用户管理搜索条件
+#### GET  /searchTerm?type=regUser
+
+######入参：
+		* type					  String   条件类型		  	
+######出参：
+	"result":
+		{
+			"status": [
+			  {
+				"id": 1,
+				"option": "停用" 
+			  },
+			  { ... }
+			],
+			"role": [
+				{
+				"id": 1,
+				"option": "普通用户" 
+			  },
+			  { ... }
+			]
 		}				  
 		
 <a name="generateCode"></a>
@@ -1735,9 +1760,9 @@ API地址: https://github.com/shiningwhite/m73_api
 		   "operation": 1
 		}
 		
-<a name="userList"></a>
+<a name="regUserList"></a>
 ###用户列表
-#### GET  /user/lists
+#### GET  /regUser/lists
 
 ######入参：
 			   sort				  Int 2:浏览数, 5:喜欢书, 6: 评论数 降序
@@ -1772,9 +1797,9 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "pageTotal": "数量"
 		}
 		
-<a name="userAdd"></a>
+<a name="regUserAdd"></a>
 ###新增用户
-#### GET  /user/set
+#### GET  /regUser/set
 
 ######入参：
 			  account	    Int	 手机账号
@@ -1790,9 +1815,9 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "operation": 1
 		}
 		
-<a name="userSet"></a>
+<a name="regUserSet"></a>
 ###编辑用户
-#### GET  /user/set
+#### GET  /regUser/set
 
 ######入参：
 			  id            Int 用户ID
@@ -1809,9 +1834,9 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "operation": 1
 		}
 		
-<a name="userStatus"></a>
+<a name="regUserStatus"></a>
 ###用户启用状态修改
-#### GET  /user/set
+#### GET  /regUser/set
 
 ######入参：
 			  status            Int 0:停用 1：启用
