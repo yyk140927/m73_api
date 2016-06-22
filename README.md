@@ -1548,7 +1548,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  specialColumn		 Array
 			  tag				 Array
 			  desc				 String
-			  wxId			  String
+			  wxId				 String
 ######出参:	
 	 "result":
 		{
@@ -1573,7 +1573,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  specialColumn		   Array
 			  tag				   Array
 			  desc				   String
-			  wxId				String
+			  wxId				   String
 ######出参:
 	 "result":
 		{
@@ -1805,12 +1805,12 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /regUser/set
 
 ######入参：
-			  *account	    Int	 手机账号
+			  *account		Int	 手机账号
 			  *password	  	String  密码
 			  *confirmPwd	String  确认密码
-			  *nickname	    String  昵称	
-			  role		    Array	 角色ID
-			  avatarUrl	    String  头像相对路径
+			  *nickname		String  昵称	
+			  role			Array	 角色ID
+			  avatarUrl		String  头像相对路径
 			  
 			   
 ######出参：
@@ -1824,10 +1824,10 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /regUser/set
 
 ######入参：
-			 *id          	Int 用户ID
-			 *nickname	    String  昵称	
-			  role		    Array	 角色ID
-			  avatarUrl	    String  头像相对路径
+			 *id		  	Int 用户ID
+			 *nickname		String  昵称	
+			  role			Array	 角色ID
+			  avatarUrl		String  头像相对路径
 			  status   		Int 0:停用 1：启用
 			   
 ######出参：
@@ -1842,7 +1842,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /feedback/lists
 
 ######入参：
-			 page            Int 分页
+			 page			Int 分页
 			 
 ######出参：
 	"result":
@@ -1868,8 +1868,8 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /feedback/set
 
 ######入参：
- 			   *id                Int ID
-			   	remark            String 备注
+ 			   *id				Int ID
+			   	remark			String 备注
 			   
 ######出参：
 	"result":
