@@ -24,7 +24,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		+ 审核管理		
 			+ [飞小编报名审核](#applyList)		 
 			+ [删除飞小编申请](#delApply)
-			+ [搜索飞小编申请列表](#searchApply)			
+			+ [搜索飞小编申请列表](#searchApply)	
 			+ [编辑飞小编申请](#setApply)
 			+ [消息通知](#sendEmail)
 			+ [飞小编报名审核详情页](#applyDetail)
@@ -1037,9 +1037,12 @@ API地址: https://github.com/shiningwhite/m73_api
 			],
 			"role": [
 				{
+				"id": -1,
+				"option": "全部" 
+			  },{
 				"id": 1,
-				"option": "普通用户" 
-			  },
+				"option": "飞小编" 
+			  }
 			  { ... }
 			]
 		}				  
@@ -1802,12 +1805,13 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /regUser/set
 
 ######入参：
-			  account	    Int	 手机账号
-			  password	  	String  密码
-			  confirmPwd	String  确认密码
-			  role		    Int	 角色ID
+			  *account	    Int	 手机账号
+			  *password	  	String  密码
+			  *confirmPwd	String  确认密码
+			  *nickname	    String  昵称	
+			  role		    Array	 角色ID
 			  avatarUrl	    String  头像相对路径
-			  nickname	    String  昵称	
+			  
 			   
 ######出参：
 	"result":
@@ -1820,13 +1824,11 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /regUser/set
 
 ######入参：
-			  id            Int 用户ID
-			  account	    Int	 手机账号
-			  password	  	String  密码
-			  confirmPwd	String  确认密码
-			  role		    Int	 角色ID
+			 *id          	Int 用户ID
+			 *nickname	    String  昵称	
+			  role		    Array	 角色ID
 			  avatarUrl	    String  头像相对路径
-			  nickname	    String  昵称	
+			  status   		Int 0:停用 1：启用
 			   
 ######出参：
 	"result":
@@ -1834,18 +1836,6 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "operation": 1
 		}
 		
-<a name="regUserStatus"></a>
-###用户启用状态修改
-#### GET  /regUser/set
-
-######入参：
-			  status            Int 0:停用 1：启用
-			   
-######出参：
-	"result":
-		{
-		  "operation": 1
-		}
 		
 <a name="feedbackList"></a>
 ###反馈列表
@@ -1853,7 +1843,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			 page            Int 分页
-			   
+			 
 ######出参：
 	"result":
 		{
@@ -1878,8 +1868,8 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /feedback/set
 
 ######入参：
-			  remark            String 备注
-			  id                Int ID
+ 			   *id                Int ID
+			   	remark            String 备注
 			   
 ######出参：
 	"result":
