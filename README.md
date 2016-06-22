@@ -1768,7 +1768,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /regUser/lists
 
 ######入参：
-			   sort				  Int 8:ID 9:注册时间 10:上次登录 11:登录数 12:角色 13:玩法 14:主题  15:文章 16:关注  17:粉丝 降序
+			   sort				  Int 9:注册时间 10:上次登录 11:登录数 12:角色 13:玩法 14:主题  15:文章 16:关注  17:粉丝 降序
 			   page				  Int 分页
 			   status			  Int 状态
 			   role				  Int 身份
