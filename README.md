@@ -1781,7 +1781,8 @@ API地址: https://github.com/shiningwhite/m73_api
 			{
 			  "id": ID,
 			  "regTime": "注册时间",
-			  "lastLogin": "上次登录"
+			  "lastLogin": "上次登录",
+			  "nickname": "昵称",
 			  "avatarDomain": "头像domain",
 			  "avatarUrl": "头像相对路径",
 			  "status": 0, //  0:停用， 1:启用
