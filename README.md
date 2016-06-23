@@ -98,7 +98,6 @@ API地址: https://github.com/shiningwhite/m73_api
 			+ [用户列表](#regUserList)
 			+ [添加用户](#regUserAdd)
 			+ [编辑用户](#regUserSet)
-			+ [用户启用状态修改](#regUserStatus)
 			+ [反馈列表](#feedbackList)
 			+ [反馈备注](#feedbackSet)
 	
@@ -1768,7 +1767,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /regUser/lists
 
 ######入参：
-			   sort				  Int 9:注册时间 10:上次登录 11:登录数 12:角色 13:玩法 14:主题  15:文章 16:关注  17:粉丝 降序
+			   sort				  Int 9:注册时间 10:上次登录 11:登录数 13:玩法 14:主题  15:文章 16:关注  17:粉丝 降序
 			   page				  Int 分页
 			   status			  Int 状态
 			   role				  Int 身份
@@ -1789,7 +1788,13 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "source": "来源", 
 			  "account": "帐号",
 			  "loginCount": "登录数",
-			  "role": "角色",
+			  "role": [
+				{
+				  "id": 1,
+				  "option": "飞小编",
+				  "isChecked": 1  //  选中
+				},{ ... }
+			  ],
 			  "playCount": "玩法"
 			  "themeCount": "主题",
 			  "articleCount": "文章",
