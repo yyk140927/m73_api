@@ -1940,7 +1940,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   status			  Int 状态
 			   title			  String 玩法标题
 			   activityTitle	  String 活动标题
-			   type			  Int 0:待审核，1:其他
+			   type				  Int 0:待审核，1:其他
 			   
 ######出参：
 	"result":
