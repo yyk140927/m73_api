@@ -59,6 +59,8 @@ API地址: https://github.com/shiningwhite/m73_api
 			+ [每日文章推荐搜索条件](#dailyTerm)
 			+ [文章管理搜索条件](#articleTerm)
 			+ [注册用户搜索条件](#userTerm)
+			+ [玩法管理搜索条件](#playTerm)
+			+ [活动管理搜索条件](#activityTerm)
 		+ 二维码相关
 			+ [生成二维码](#generateCode)
 		+ 导航相关
@@ -100,6 +102,15 @@ API地址: https://github.com/shiningwhite/m73_api
 			+ [编辑用户](#regUserSet)
 			+ [反馈列表](#feedbackList)
 			+ [反馈备注](#feedbackSet)
+		+ 玩法管理
+			+ [玩法列表](#playList)
+			+ [玩法编辑](#playSet)
+			+ [玩法评论列表](#playCommentList)
+			+ [玩法评论编辑](#playCommentSet)
+			+ [活动列表](#activityList)
+			+ [活动详情](#activityDetail)
+			+ [新增活动](#activityAdd)
+			+ [编辑活动](#activitySet)
 	
 <a name="description"></a>
 ##文档描述
@@ -1044,7 +1055,43 @@ API地址: https://github.com/shiningwhite/m73_api
 			  }
 			  { ... }
 			]
-		}				  
+		}
+		
+<a name="playTerm"></a>
+###玩法管理搜索条件
+#### GET  /searchTerm?type=play
+
+######入参：
+		* type					  String   条件类型		  	
+######出参：
+	"result":
+		{
+			"status": [
+			  {
+				"id": 1,
+				"option": "停用" 
+			  },
+			  { ... }
+			]
+		}
+	
+<a name="activityTerm"></a>
+###活动管理搜索条件
+#### GET  /searchTerm?type=activity
+
+######入参：
+		* type					  String   条件类型		  	
+######出参：
+	"result":
+		{
+			"status": [
+			  {
+				"id": 1,
+				"option": "停用" 
+			  },
+			  { ... }
+			]
+		}					  
 		
 <a name="generateCode"></a>
 ###生成二维码
@@ -1881,4 +1928,195 @@ API地址: https://github.com/shiningwhite/m73_api
 	"result":
 		{
 		  "operation": 1
-		}										
+		}
+		
+<a name="playList"></a>
+###玩法列表
+#### GET  /play/lists
+
+######入参：
+			   sort				  Int 2:浏览数 3:赞数 4:评论数 降序
+			   page				  Int 分页
+			   status			  Int 状态
+			   title			  String 玩法标题
+			   activityTitle	  String 活动标题
+			   type			  Int 0:待审核，1:其他
+			   
+######出参：
+	"result":
+		{
+		  "list": [
+			{
+			  "id": ID,
+			  "time": "时间",
+			  "city": "城市",
+			  "scenic": "景点",
+			  "user": "用户",
+			  "userId": "用户ID",
+			  "title": "玩法标题",
+			  "content": "玩法内容",
+			  "playId":"玩法ID",		  
+			  "status": 0, //  0:待审核， 1:拒绝  2:通过
+			  "isRecommend": 0, // 0:否  1:是 
+			  "readCount": "浏览数",
+			  "commentCount": "评论数",
+			  "likeCount": "赞数"			
+			 },
+			{ ... }			
+		  ],
+		  "pageTotal": "数量"
+		}
+		
+<a name="playSet"></a>
+###玩法编辑
+#### GET  /play/set
+
+######入参：
+			 *id			Int	 玩法ID
+			  status		Int 通过／拒绝
+			  isRecommend	Int  是否推荐
+			  isReview		Int 是否重审
+			   
+######出参：
+	"result":
+		{
+		  "operation": 1
+		}
+
+<a name="playCommentList"></a>
+###玩法评论列表
+#### GET  /playComment/lists
+
+######入参：
+			   page				Int 分页
+		   	   type				int 0:待审核，1:其他  
+			   
+######出参：
+	"result":
+		{
+		  "list": [
+			{
+			  "id": ID,
+			  "time": "时间",
+			  "user": "用户",
+			  "userId": "用户ID",
+			  "title": "玩法标题",
+			  "content": "玩法内容",
+			  "playId":"玩法ID",		  		
+			 },
+			{ ... }			
+		  ],
+		  "pageTotal": "数量"
+		}
+		
+<a name="playCommentSet"></a>
+###玩法评论编辑
+#### GET  /playComment/set
+
+######入参：
+			 *id			Int	 玩法ID
+			  status		Int 通过／拒绝
+			   
+######出参：
+	"result":
+		{
+		  "operation": 1
+		}		
+		
+<a name="activityList"></a>
+###活动列表
+#### GET  /activity/lists
+
+######入参：
+			   page				Int 分页
+			   
+######出参：
+	"result":
+		{
+		  "list": [
+			{
+			  "id": ID,
+			  "coverDomain": "封面domain",
+			  "coverUrl": "封面地址"
+			  "title": "标题",
+			  "user": "发起人",
+			  "playCount": "参与数",
+			  "readCount": "浏览数",
+			  "status": 0:停用 1:启用,
+			  "startTime":"开始日期",		
+			  "endTime":"截止日期",	  		
+			 },
+			{ ... }			
+		  ],
+		  "pageTotal": "数量"
+		}
+
+<a name="activityDetail"></a>		
+###活动详情
+#### GET  /activity/detail?id={id}
+
+######入参：
+			   *id				Int ID
+			   
+######出参：
+	"result":
+		{
+		  "item": {
+		  	  "id": ID,
+			  "coverDomain": "封面domain",
+			  "coverUrl": "封面地址"
+			  "title": "标题",
+			  "userId": "发起人ID",
+			  "startTime":"开始日期",		
+			  "endTime":"截止日期",	
+			  "lotteryUrl": "中奖地址",
+			  "descUrl": "活动详情地址",
+			  "desc": "简介",
+			  "rule": "规则",
+			  "lotteryCount":"中奖人数"
+		  }
+		}		
+		
+<a name="activityAdd"></a>
+###新增活动
+#### GET  /activity/set
+
+######入参：
+			 *coverUrl		String 封面地址
+			 *title			String 标题
+			 *desc			String 简介
+			 *startTime		String 开始日期	
+			 *endTime		String 截止日期
+			 *rule			String 规则
+			  userId		String 发起人ID
+			  lotteryUrl	String 中奖地址
+			  descUrl		String 活动详情地址
+			  lotteryCount	String 中奖人数
+			   
+######出参：
+
+		
+<a name="activitySet"></a>
+###编辑活动
+#### GET  /activity/set
+
+######入参：
+			 *id			Int	 玩法ID
+			  status		Int  停用／启用
+			 *coverUrl		String 封面地址
+			 *title			String 标题
+			 *desc			String 简介
+			 *startTime		String 开始日期	
+			 *endTime		String 截止日期
+			 *rule			String 规则
+			  userId		String 发起人ID
+			  lotteryUrl	String 中奖地址
+			  descUrl		String 活动详情地址
+			  lotteryCount	String 中奖人数
+			   
+######出参：
+	"result":
+		{
+		  "operation": 1
+		}				
+		
