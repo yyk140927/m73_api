@@ -2029,6 +2029,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			   page				Int 分页
+			   status			Int -1:全部 0:停用 1:启用
 			   
 ######出参：
 	"result":
