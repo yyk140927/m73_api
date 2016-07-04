@@ -1937,10 +1937,9 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			   sort				  Int 2:浏览数 3:赞数 4:评论数 降序
 			   page				  Int 分页
-			   status			  Int 状态
+			   status			  Int 状态 0:待审核，1:其他
 			   title			  String 玩法标题
 			   activityTitle	  String 活动标题
-			   type				  Int 0:待审核，1:其他
 			   
 ######出参：
 	"result":
@@ -1973,9 +1972,9 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			 *id			Int	 玩法ID
-			  status		Int 通过／拒绝
+			  status		Int  通过／拒绝
 			  isRecommend	Int  是否推荐
-			  isReview		Int 是否重审
+			  isReview		Int  是否重审
 			   
 ######出参：
 	"result":
@@ -1989,7 +1988,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			   page				Int 分页
-		   	   type				int 0:待审核，1:其他  
+		   	   status			int 0:待审核，1:其他  
 			   
 ######出参：
 	"result":
