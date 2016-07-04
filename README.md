@@ -108,7 +108,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			+ [玩法评论列表](#playCommentList)
 			+ [玩法评论编辑](#playCommentSet)
 			+ [活动列表](#activityList)
-			+ [活动详情](#activityDetail)
+			+ [活动详情](#activityInfo)
 			+ [新增活动](#activityAdd)
 			+ [编辑活动](#activitySet)
 	
@@ -2053,9 +2053,9 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "pageTotal": "数量"
 		}
 
-<a name="activityDetail"></a>		
+<a name="activityInfo"></a>		
 ###活动详情
-#### GET  /activity/detail?id={id}
+#### GET  /activity/info?id={id}
 
 ######入参：
 			   *id				Int ID
