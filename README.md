@@ -1954,7 +1954,6 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "userId": "用户ID",
 			  "title": "玩法标题",
 			  "content": "玩法内容",
-			  "playId":"玩法ID",		  
 			  "status": 0, //  0:待审核， 1:拒绝  2:通过
 			  "isRecommend": 0, // 0:否  1:是 
 			  "readCount": "浏览数",
@@ -2001,7 +2000,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "userId": "用户ID",
 			  "title": "玩法标题",
 			  "content": "玩法内容",
-			  "playId":"玩法ID",		  		
+			  "playId":"玩法ID",		 
 			 },
 			{ ... }			
 		  ],
