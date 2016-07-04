@@ -2053,7 +2053,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 <a name="activityInfo"></a>		
 ###活动详情
-#### GET  /activity/info?id={id}
+#### GET  /activity/detail?id={id}
 
 ######入参：
 			   *id				Int ID
