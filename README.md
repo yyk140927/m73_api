@@ -2044,7 +2044,8 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "readCount": "浏览数",
 			  "status": 0:停用 1:启用,
 			  "startTime":"开始日期",		
-			  "endTime":"截止日期",	  		
+			  "endTime":"截止日期",
+			  "activityLink": "活动链接"	
 			 },
 			{ ... }			
 		  ],
@@ -2056,7 +2057,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /activity/detail?id={id}
 
 ######入参：
-			   *id				Int ID
+			   id				Int ID // id为空为新增
 			   
 ######出参：
 	"result":
@@ -2073,7 +2074,18 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "descUrl": "活动详情地址",
 			  "desc": "简介",
 			  "rule": "规则",
-			  "lotteryCount":"中奖人数"
+			  "lotteryCount":"中奖人数",
+			  "shareUrl": "活动分享地址",
+			  "shareTitle": "活动分享标题",
+			  spaceName: "又拍云上传空间"，
+			  type: [
+			  	{
+			  		id: 1,
+			  		type: '活动',
+			  		isChecked: 1
+			  	},
+			  	{ ... }
+			  ]
 		  }
 		}		
 		
@@ -2088,6 +2100,9 @@ API地址: https://github.com/shiningwhite/m73_api
 			 *startTime		String 开始日期	
 			 *endTime		String 截止日期
 			 *rule			String 规则
+			 *type			String 活动类型
+			 *shareUrl		String 活动分享地址
+			 *shareTitle	String 活动分享标题
 			  userId		String 发起人ID
 			  lotteryUrl	String 中奖地址
 			  descUrl		String 活动详情地址
@@ -2109,6 +2124,9 @@ API地址: https://github.com/shiningwhite/m73_api
 			 *startTime		String 开始日期	
 			 *endTime		String 截止日期
 			 *rule			String 规则
+			 *type			String 活动类型
+			 *shareUrl		String 活动分享地址
+			 *shareTitle	String 活动分享标题
 			  userId		String 发起人ID
 			  lotteryUrl	String 中奖地址
 			  descUrl		String 活动详情地址
