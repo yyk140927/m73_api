@@ -2081,7 +2081,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  type: [
 			  	{
 			  		id: 1,
-			  		type: '活动',
+			  		option: '活动',
 			  		isChecked: 1
 			  	},
 			  	{ ... }
