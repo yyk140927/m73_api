@@ -2188,7 +2188,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ### 当季小众推荐列表
 
-#### GET  /guide/season_resommend_list
+#### GET  /guide_season/list
 
 ######入参：
 			   page				Int 分页
@@ -2221,7 +2221,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ### 当季小众推荐编辑/新增
 
-#### POST /guide/season_resommend_edit
+#### POST /guide_season/set
 
 ######入参：
 			 *id			Int	 ID  // 新增不是必填
@@ -2243,7 +2243,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ### 当季小众推荐详情
 
-#### GET /guide/season_resommend_detail
+#### GET /guide_season/detail
 
 ######入参：
 			 *id			Int	 ID
@@ -2283,7 +2283,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ### 当季小众推荐删除
 
-#### POST /guide/season_resommend_del
+#### POST /guide_season/del
 
 ######入参：
 			 *id			Int	 ID
@@ -2299,7 +2299,7 @@ API地址: https://github.com/shiningwhite/m73_api
 <a name="guideCityList"></a>
 
 ### 攻略首页分类列表
-#### GET  /guide/city_list
+#### GET  /guide_city/list
 
 ######入参：
 			   page				Int 分页
@@ -2311,7 +2311,7 @@ API地址: https://github.com/shiningwhite/m73_api
 	{
 	  "list": [
 		{
-		  "id": "ID,
+		  "id": "ID",
 		  "area": "区域",
 		  "site": "目的地名称"
 		  "desc": "区域描述",
@@ -2326,7 +2326,7 @@ API地址: https://github.com/shiningwhite/m73_api
 <a name="guideCitySet"></a>
 
 ### 攻略首页分类编辑/新增
-#### post  /guide/city_edit
+#### post  /guide_city/set
 
 ######入参：
 			*id     Int   ID   // 新增不是必填
@@ -2346,7 +2346,7 @@ API地址: https://github.com/shiningwhite/m73_api
 <a name="guideCityDetail"></a>
 
 ### 攻略首页分类详情
-#### GET  /guide/city_detail
+#### GET  /guide_city/detail
 
 ######入参：
 			   *id			Int ID	
@@ -2357,7 +2357,7 @@ API地址: https://github.com/shiningwhite/m73_api
 "result":
 	{
 	  "info": {
-		  "id": ID,
+		  "id": "ID",
 		  "area": "区域",
 		  "site": [{
             "id": 1,
@@ -2374,7 +2374,7 @@ API地址: https://github.com/shiningwhite/m73_api
 <a name="delCity"></a>
 
 ### 攻略首页分类删除
-#### POST  /guide/city_del
+#### POST  /guide_city/del
 
 ######入参：
 			   *id			Int ID	
