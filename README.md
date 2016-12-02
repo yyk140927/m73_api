@@ -2389,7 +2389,7 @@ API地址: https://github.com/shiningwhite/m73_api
 <a name="guideCitySearch"></a>
 
 ### 攻略目的地搜索
-#### POST  /guide/site_search
+#### POST  /guide_city/search
 
 ######入参：
 			  *text			String 关键字
