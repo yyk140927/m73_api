@@ -1,4 +1,6 @@
 # m73_api
+
+
 Feekr后台管理系统API Document
 ---
 
@@ -16,103 +18,116 @@ API地址: https://github.com/shiningwhite/m73_api
 
 #### V2.0.2
 + 目录
-	+ [文档描述](#description)
-	+ [接口详情](#detail)
-		+  用户相关
-			+ [用户登录](#login)
-			+ [修改密码](#resetPwd)
-		+ 审核管理		
-			+ [飞小编报名审核](#applyList)		 
-			+ [删除飞小编申请](#delApply)
-			+ [搜索飞小编申请列表](#searchApply)	
-			+ [编辑飞小编申请](#setApply)
-			+ [消息通知](#sendEmail)
-			+ [飞小编报名审核详情页](#applyDetail)
-			+ [邮件通知模版](#emailTpl)
-			+ [编辑邮件模版](#setEmail)
-		+ 广告管理
-			+ [广告分类管理](#adCategory)
-			+ [编辑广告分类](#setAdCategory)
-			+ [新增广告分类](#addAdCategory)
-			+ [广告列表](#adList)
-			+ [编辑广告](#setAd)
-			+ [新增广告](#addAd)
-		+ 权限管理
-			+ [用户列表](#userList)
-			+ [新增用户](#addUser)
-			+ [编辑用户](#setUser)
-			+ [删除用户](#delUser)
-			+ [角色列表](#roleList)
-			+ [新增角色](#addRole)
-			+ [编辑角色](#setRole)
-			+ [删除角色](#delRole)
-			+ [权限列表](#authlist)
-			+ [新增&修改权限](#accessset)
-			+ [删除权限](#accessdel)
-			+ [验证权限](#verifyAuth)
-		+ 搜索相关
-			+ [飞小编搜索条件](#applySearchTerm)
-			+ [广告搜索条件](#adSearchTerm)
-			+ [用户搜索条件](#userSearchTerm)
-			+ [玩法兑换搜索条件](#exchangeTerm)
-			+ [玩法商品搜索条件](#awardTerm)
-			+ [每日文章推荐搜索条件](#dailyTerm)
-			+ [文章管理搜索条件](#articleTerm)
-			+ [注册用户搜索条件](#userTerm)
-			+ [玩法管理搜索条件](#playTerm)
-			+ [活动管理搜索条件](#activityTerm)
-		+ 二维码相关
-			+ [生成二维码](#generateCode)
-		+ 导航相关
-			+ [导航列表](#navList)
-		+ 系统面板
-			+ [快捷方式](#hotkey)
-		+ 玩法商城管理
-			+ [玩法奖励列表](#awardList)
-			+ [玩法奖励设置](#awardSet)
-			+ [玩法兑换列表](#exchangeList)  
-			+ [玩法兑换编辑](#exchangeSet)
-		+ 图片上传
-			+ [获取又拍云上传签名](#getSign)
-			+ [图片上传](#upload)
-		+ 文章管理
-			+ [官方栏目列表](#officialSectionList)
-			+ [修改官方栏目](#setOfficialSection)
-			+ [新增官方栏目](#addOfficialSection)
-			+ [删除官方栏目](#delOfficialSection)
-			+ [专栏作者列表](#specialAuthorList)
-			+ [修改专栏作者](#setSpecialAuthor)
-			+ [删除专栏作者](#delSpecialAuthor)
-			+ [文章列表](#articleList)
-			+ [文章详情](#articleDetail)
-			+ [新增文章](#addArticle)
-			+ [编辑文章](#setArticle)
-			+ [搜索专栏作者](#spColumn)
-			+ [微信文章列表](#wxArticleList)
-			+ [微信文章详情](#wxArticleDetail)
-			+ [更新微信文章](#updateWxArticle)
-		+ 推荐管理
-			+ [每日文章推荐列表](#dailyList)
-			+ [编辑每日文章推荐](#setDaily)
-			+ [新增每日文章推荐](#addDaily)
-			+ [新增每日文章推荐状态修改](#addDailyStatus)
-		+ 用户管理
-			+ [用户列表](#regUserList)
-			+ [添加用户](#regUserAdd)
-			+ [编辑用户](#regUserSet)
-			+ [反馈列表](#feedbackList)
-			+ [反馈备注](#feedbackSet)
-		+ 玩法管理
-			+ [玩法列表](#playList)
-			+ [玩法编辑](#playSet)
-			+ [玩法评论列表](#playCommentList)
-			+ [玩法评论编辑](#playCommentSet)
-			+ [活动列表](#activityList)
-			+ [活动详情](#activityInfo)
-			+ [新增活动](#activityAdd)
-			+ [编辑活动](#activitySet)
-	
+  + [文档描述](#description)
+  + [接口详情](#detail)
+    +  用户相关
+       + [用户登录](#login)
+       + [修改密码](#resetPwd)
+         + 审核管理
+           + [飞小编报名审核](#applyList) 
+       + [删除飞小编申请](#delApply)
+         + [搜索飞小编申请列表](#searchApply)
+       + [编辑飞小编申请](#setApply)
+       + [消息通知](#sendEmail)
+       + [飞小编报名审核详情页](#applyDetail)
+       + [邮件通知模版](#emailTpl)
+       + [编辑邮件模版](#setEmail)
+    +  广告管理
+       + [广告分类管理](#adCategory)
+       + [编辑广告分类](#setAdCategory)
+       + [新增广告分类](#addAdCategory)
+       + [广告列表](#adList)
+       + [编辑广告](#setAd)
+       + [新增广告](#addAd)
+    +  权限管理
+       + [用户列表](#userList)
+       + [新增用户](#addUser)
+       + [编辑用户](#setUser)
+       + [删除用户](#delUser)
+       + [角色列表](#roleList)
+       + [新增角色](#addRole)
+       + [编辑角色](#setRole)
+       + [删除角色](#delRole)
+       + [权限列表](#authlist)
+       + [新增&修改权限](#accessset)
+       + [删除权限](#accessdel)
+       + [验证权限](#verifyAuth)
+    +  搜索相关
+       + [飞小编搜索条件](#applySearchTerm)
+       + [广告搜索条件](#adSearchTerm)
+       + [用户搜索条件](#userSearchTerm)
+       + [玩法兑换搜索条件](#exchangeTerm)
+       + [玩法商品搜索条件](#awardTerm)
+       + [每日文章推荐搜索条件](#dailyTerm)
+       + [文章管理搜索条件](#articleTerm)
+       + [注册用户搜索条件](#userTerm)
+       + [玩法管理搜索条件](#playTerm)
+       + [活动管理搜索条件](#activityTerm)
+       + [攻略当季小众推荐条件](#guideSeasonTerm)
+    +  二维码相关
+       + [生成二维码](#generateCode)
+    +  导航相关
+       + [导航列表](#navList)
+    +  系统面板
+       + [快捷方式](#hotkey)
+    +  玩法商城管理
+       + [玩法奖励列表](#awardList)
+       + [玩法奖励设置](#awardSet)
+       + [玩法兑换列表](#exchangeList)  
+       + [玩法兑换编辑](#exchangeSet)
+    +  图片上传
+       + [获取又拍云上传签名](#getSign)
+       + [图片上传](#upload)
+    +  文章管理
+       + [官方栏目列表](#officialSectionList)
+       + [修改官方栏目](#setOfficialSection)
+       + [新增官方栏目](#addOfficialSection)
+       + [删除官方栏目](#delOfficialSection)
+       + [专栏作者列表](#specialAuthorList)
+       + [修改专栏作者](#setSpecialAuthor)
+       + [删除专栏作者](#delSpecialAuthor)
+       + [文章列表](#articleList)
+       + [文章详情](#articleDetail)
+       + [新增文章](#addArticle)
+       + [编辑文章](#setArticle)
+       + [搜索专栏作者](#spColumn)
+       + [微信文章列表](#wxArticleList)
+       + [微信文章详情](#wxArticleDetail)
+       + [更新微信文章](#updateWxArticle)
+    +  推荐管理
+       + [每日文章推荐列表](#dailyList)
+       + [编辑每日文章推荐](#setDaily)
+       + [新增每日文章推荐](#addDaily)
+       + [新增每日文章推荐状态修改](#addDailyStatus)
+    +  用户管理
+       + [用户列表](#regUserList)
+       + [添加用户](#regUserAdd)
+       + [编辑用户](#regUserSet)
+       + [反馈列表](#feedbackList)
+       + [反馈备注](#feedbackSet)
+    +  玩法管理
+       + [玩法列表](#playList)
+       + [玩法编辑](#playSet)
+       + [玩法评论列表](#playCommentList)
+       + [玩法评论编辑](#playCommentSet)
+       + [活动列表](#activityList)
+       + [活动详情](#activityInfo)
+       + [新增活动](#activityAdd)
+       + [编辑活动](#activitySet)
+
+    +  攻略管理
+       - [当季小众推荐列表](#guideSeasonList)
+       - [当季小众推荐编辑/新增](#guideSeasonSet)
+       - [当季小众推荐详情](#guideSeasonDetail)
+       - [当季小众推荐删除](#delSeason)
+       - [攻略首页分类列表](#guideCityList)
+       - [攻略首页分类编辑/新增](#guideCitySet)
+       - [攻略首页分类详情](#guideCityDetail)
+       - [攻略首页分类删除](#delCity)
+       - [攻略目的地搜索](#guideCitySearch)
+
 <a name="description"></a>
+
 ##文档描述
 ###请求URL
 接口地址以URI代替完整的URL,例如
@@ -120,7 +135,7 @@ API地址: https://github.com/shiningwhite/m73_api
 	http://mfly.feekr.com/login/{userId}
 
 将会简写成
-	
+​	
 	/login/{userId}
 其中{}表示变量,由请求发起方传入相应的值。
 
@@ -131,12 +146,12 @@ API地址: https://github.com/shiningwhite/m73_api
 
 + GET	获取信息
 + POST   用于创建新内容操作
-+ PUT	用于更新操作
+  + PUT用于更新操作
 + DELETE 用于删除操作 
 
 ###参数
 		* 表示必填
-		
+
 ###出参：通用JSON格式
 	{
 		/**
@@ -156,8 +171,8 @@ API地址: https://github.com/shiningwhite/m73_api
 		   message:""
 	   } 
 	}
-	
-	
+
+
 <a name="detail"></a>
 ##接口详情 
 
@@ -169,13 +184,13 @@ API地址: https://github.com/shiningwhite/m73_api
 			* username				  String	用户名
 			* password				  String	密码
 			* vcode					  String	验证码
-			
+
 ######出参：
 	"result":
 		{
 			"operation": 1  //登录成功返回，否则errorCode提示错误消息
 		}
-		
+
 <a name="resetPwd"></a>
 ###修改密码
 #### POST  /auth/resetPwd
@@ -184,12 +199,12 @@ API地址: https://github.com/shiningwhite/m73_api
 			* oldPwd				  String	原密码
 			* newPwd				  String	新密码
 			* repeatPwd				  String	确认密码
-			
+
 ######出参：
 	"result":
 		{
 			"operation": 1  //修改成功，否则errorCode提示错误消息
-
+	
 		}
 
 <a name="applyList"></a>		   
@@ -206,7 +221,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  qq					String	qq号
 			  city					String	熟悉的城市
 			  remark				String	备注
-			
+
 ######出参：
 	"result":
 		{
@@ -234,21 +249,21 @@ API地址: https://github.com/shiningwhite/m73_api
 			],			 
 			"pageTotal": "数量"
 		}
- 
-		
+
+
  <a name="delApply"></a>
 ###删除飞小编申请
 #### POST  /apply/del
 
 ######入参：
 			* applyId				 String	申请ID
-			
+
 ######出参：
 	"result":
 		{
 			"operation": 1  //修改成功，否则errorCode提示错误消息
 		}
-			  
+
 
 <a name="setApply"></a>
 ###编辑飞小编申请
@@ -258,13 +273,13 @@ API地址: https://github.com/shiningwhite/m73_api
 			* applyId				 String	申请ID
 			  applyStatus			 Boolean   状态 true表示通过， false表示失败
 			  remark				 String	备注
-				   
+
 ######出参：
 	"result":
 		{
 			"operation": 1  //修改成功，否则errorCode提示错误消息
 		}
- 
+
 <a name="sendEmail"></a>
 ###发送邮件通知
 #### POST  /email/send
@@ -272,7 +287,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			* applyId				Array	申请ID
 			  type					String   消息类型 ‘sms,email’
-				   
+
 ######出参：
 	"result":
 		{
@@ -293,14 +308,14 @@ API地址: https://github.com/shiningwhite/m73_api
 			]
 			
 		}						 
-		
+
 <a name="applyDetail"></a>
 ###飞小编报名审核详情页
 #### GET  /apply/detail?apply={applyId}
 
 ######入参：
 			* applyId				 String	申请ID
-				   
+
 ######出参：
 	"result":
 		{
@@ -322,13 +337,13 @@ API地址: https://github.com/shiningwhite/m73_api
 				  "email": "邮箱"				  
 			 }
 		} 
-		
+
 <a name="emailTpl"></a>
 ###邮件通知模版
 #### GET  /email/tpl
 
 ######入参：
-				   
+
 ######出参：
 	"result":
 		{
@@ -339,7 +354,7 @@ API地址: https://github.com/shiningwhite/m73_api
 				"fail": "失败的模版内容"
 			 }
 		}
-		
+
  <a name="setEmail"></a>	   
 ###编辑邮件模版
 #### POST  /email/set
@@ -349,7 +364,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			* fail				   String	失败的模版内容
 			* successTitle		   String	通过的标题
 			* failTitle			   String	失败的标题
-				   
+
 ######出参：
 
 	"result":
@@ -379,7 +394,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			 ],
 			  "pageTotal": "数量"
 		}
-							
+
 <a name="setAdCategory"></a>
 ###编辑广告分类
 #### POST  /adCategory/set
@@ -404,7 +419,7 @@ API地址: https://github.com/shiningwhite/m73_api
 				"status": true  // 停用 true: 开启，false: 停用
 			}
 		}	 
-		
+
 <a name="addAdCategory"></a>
 ###新增广告分类
 #### POST  /adCategory/set
@@ -428,7 +443,7 @@ API地址: https://github.com/shiningwhite/m73_api
 				"status": true  // 停用 true: 开启，false: 停用
 			}
 		} 
-		
+
 <a name="adList"></a>
 ###广告列表
 #### POST  /ad/lists
@@ -480,7 +495,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   endTime				  String  下线时间
 			   pic					  String  图片
 			   title				  String  广告标题
-				
+
 
 ######出参：
 	"result":
@@ -502,7 +517,7 @@ API地址: https://github.com/shiningwhite/m73_api
 				"endTime": "下线时间"
 			 }
 		}		  
-		
+
 <a name="addAd"></a>		
 ###新增广告
 #### POST  /ad/set
@@ -517,7 +532,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   endTime				 String  下线时间
 			   pic					 String  图片
 			   title				 String  广告标题
-				
+
 
 ######出参：
 	"result":
@@ -539,8 +554,8 @@ API地址: https://github.com/shiningwhite/m73_api
 				"endTime": "下线时间"
 			 }
 		} 
-		  
-		  
+
+
 <a name="userList"></a>		
 ###用户列表
 #### POST  /user/lists
@@ -570,7 +585,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		  ],
 		  "pageTotal": "数量"
 		}  
-		
+
 <a name="addUser"></a>		
 ###新增用户
 #### POST  /user/set
@@ -599,7 +614,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "createTime": "创建时间"
 		  }
 		} 
-		
+
 <a name="setUser"></a>		
 ###编辑用户
 #### POST  /user/set
@@ -629,7 +644,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "create"Time": "创建时间"
 		  }
 		}
-		
+
 <a name="delUser"></a>		
 ###删除用户
 #### POST  /user/del
@@ -642,7 +657,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		{
 		  "operation": 1  //修改成功，否则errorCode提示错误消息
 		}
-		
+
 <a name="roleList"></a>		
 ###角色列表
 #### GET  /role/lists
@@ -688,7 +703,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		   ],
 		  "pageTotal": "数量"
 		}
- 
+
  <a name="delRole"></a>		
 ###删除角色
 #### GET  /role/del
@@ -700,7 +715,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		{
 		  "operation": 1  //修改成功，否则errorCode提示错误消息
 		}											   
-			 
+
 <a name="addRole"></a>		
 ###新增角色
 #### GET  /role/set
@@ -734,15 +749,15 @@ API地址: https://github.com/shiningwhite/m73_api
 			  },
 			  { ... }
 			 ]
-
+	
 		   }				   
-				  
+
 ######出参：
 	"result":
 		{
 		   "operation": 1
 		}			  
-		 
+
 <a name="setRole"></a>		
 ###编辑角色
 #### GET  /role/set
@@ -778,20 +793,20 @@ API地址: https://github.com/shiningwhite/m73_api
 			  { ... }
 			 ]
 			}				   
-				  
+
 ######出参：
 	"result":
 		{
 		  "operation": 1
 		} 
-		
+
 <a name="authlist"></a>		
 ###权限列表
 #### GET  /access/lists
 
 ######入参：
-						
-				  
+
+
 ######出参：
 	"result":
 		{
@@ -820,7 +835,7 @@ API地址: https://github.com/shiningwhite/m73_api
 	  { ... }
 	 ]
 	}
-	
+
 <a name="accessset"></a>
 #### 新增&修改权限
 #### POST /access/set
@@ -830,7 +845,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			*parentId					 Int	父ID
 			 name						 String 备注
 			 id							 Int	如果是修改，就必须有ID
-			
+
 ######出参：
 	"result":
 		{
@@ -851,19 +866,19 @@ API地址: https://github.com/shiningwhite/m73_api
 		{
 			"operation":1					//删除成功
 		}  
-		
+
  <a name="verifyAuth"></a>
 ###验证权限
 #### GET  /auth/verifyAuth
 
 ######入参：	   
-			
+
 ######出参：
 	"result":
 		{
 			"operation": 1  //验证成功，否则errorCode提示错误消息
 		}						  
-				
+
 <a name="applySearchTerm"></a>
 ###飞小编搜索条件
 #### GET  /searchTerm?type=fxbApply
@@ -897,7 +912,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			 { ... }
 			]
 		}
-		
+
 <a name="adSearchTerm"></a>
 ###广告搜索条件
 #### GET  /searchTerm?type=ad
@@ -917,7 +932,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			 { ... }
 			],  // 广告类别
 		}
-		
+
 <a name="userSearchTerm"></a>
 ###用户搜索条件
 #### GET  /searchTerm?type=user
@@ -935,7 +950,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  { ... }
 			],  // 角色
 		}   
-		
+
 <a name="exchangeTerm"></a>
 ###玩法兑换搜索条件
 #### GET  /searchTerm?type=exchange
@@ -953,7 +968,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  { ... }
 			]
 		}															   
-		
+
 <a name="awardTerm"></a>
 ###玩法商品搜索条件
 #### GET  /searchTerm?type=award
@@ -971,7 +986,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  { ... }
 			]
 		}
-		
+
 <a name="dailyTerm"></a>
 ###每日文章推荐搜索条件
 #### GET  /searchTerm?type=daily
@@ -989,7 +1004,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  { ... }
 			]
 		}
-	  
+
 <a name="articleTerm"></a>
 ###文章管理搜索条件
 #### GET  /searchTerm?type=article
@@ -1028,7 +1043,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  { ... }
 			]
 		}
-		
+
 <a name="userTerm"></a>
 ###注册用户管理搜索条件
 #### GET  /searchTerm?type=regUser
@@ -1056,7 +1071,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  { ... }
 			]
 		}
-		
+
 <a name="playTerm"></a>
 ###玩法管理搜索条件
 #### GET  /searchTerm?type=play
@@ -1074,7 +1089,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  { ... }
 			]
 		}
-	
+
 <a name="activityTerm"></a>
 ###活动管理搜索条件
 #### GET  /searchTerm?type=activity
@@ -1092,27 +1107,58 @@ API地址: https://github.com/shiningwhite/m73_api
 			  { ... }
 			]
 		}					  
-		
+
+<a name="guideSeasonTerm"></a>
+
+### 攻略当季小众推荐条件
+
+#### GET  /searchTerm?type=guide_recommend
+
+###### 入参:
+		* type                    String   条件类型
+
+###### 出参:
+```javascript
+"result":
+	{
+		"season": [
+		  {
+			"id": 1,
+			"option": "春季"  
+		  },
+		  { ... }
+		],
+         "month": [
+		  {
+			"id": 1,
+			"option": "1月"  
+		  },
+		  { ... }
+		]
+	}
+```
+
 <a name="generateCode"></a>
+
 ###生成二维码
 #### GET  /qrcode
 
 ######入参：
 		* url					 String   条件类型  
 		  size					 String   图片大小		
-			
+
 ######出参：
 	"result":
 		{
 			"qrcode": "code.jpg"
 		}
-		
+
  <a name="navList"></a>
 ###导航列表
 #### GET  /auth/navList
 
 ######入参：		
-			
+
 ######出参：
 	"result":
 		{
@@ -1136,7 +1182,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### GET  /auth/hotkey
 
 ######入参：		
-			
+
 ######出参：
 	"result":
 		{
@@ -1149,13 +1195,13 @@ API地址: https://github.com/shiningwhite/m73_api
 			  { ... }		   
 			]
 		}
-		
+
 <a name="awardList"></a>
 ###玩法奖励列表
 #### POST  /award/lists
 
 ######入参：
-			
+
 			 id						  String 用户ID
 			 awardStatus			  String 上下架状态
 			 name					  String 奖励名称
@@ -1179,7 +1225,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			],
 		   "pageTotal": "数量"
 		}
-			
+
 <a name="awardSet"></a>
 ###玩法奖励编辑
 #### POST  /award/set
@@ -1198,13 +1244,13 @@ API地址: https://github.com/shiningwhite/m73_api
 		{
 			id: 001  // 返回商品ID
 		}  
-		
+
 <a name="exchangeList"></a>
 ###玩法兑换列表
 #### POST  /exchange/lists
 
 ######入参：
-		  
+
 			 sendStatus				  String 投递状态
 			 username				  String 飞小编用户名
 			 page					  Int  分页   
@@ -1227,7 +1273,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			],
 		   "pageTotal": "数量"
 		}  
-		
+
 <a name="exchangeSet"></a>
 ###玩法兑换编辑
 #### POST  /exchange/set
@@ -1252,7 +1298,7 @@ API地址: https://github.com/shiningwhite/m73_api
 				"sendStatus": "寄出状态"  // 1表示已寄出，0表示未寄出
 			  }, 
 		} 
-		
+
 <a name="getSign"></a>
 ###获取又拍云上传签名
 #### POST  /getSign
@@ -1269,7 +1315,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "url": "图片上传的空间域名"
 			}
 		}	
-		
+
 <a name="upload"></a>
 ###上传到又拍云
 #### POST  http://{domain}/{spaceName}
@@ -1295,7 +1341,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			"url": "/2015/12/09/1002567449e6b3dcc09dc6766c3045f0406a21"
 		  
 		}	
-		
+
 <a name="officialSectionList"></a>
 ###官方栏目列表
 #### POST  /officialColumn/lists
@@ -1303,7 +1349,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			   sort				Int 0: 文章数, 1:订阅数, 2:浏览数, 3:创建时间, 4:文章更新时间, 降序
 			   page				Int 分页
-			   
+
 ######出参：
 	"result":
 		{
@@ -1336,7 +1382,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   *coverUrl	   String 封面
 			   *avatarUrl	   String 头像
 			   *id			   String ID
-			   
+
 ######出参：
 	"result":
 		{
@@ -1355,7 +1401,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "updateTime": "文章更新时间"
 		   }
 		}
-			
+
 <a name="addOfficialSection"></a>
 ###新增官方栏目
 #### POST  /officialColumn/set
@@ -1365,7 +1411,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   *desc		   String 介绍
 			   *coverUrl	   String 封面
 			   *avatarUrl	   String 头像
-			   
+
 ######出参：
 	"result":
 		{
@@ -1384,20 +1430,20 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "updateTime": "文章更新时间"
 		   }
 		}
-		
+
 <a name="delOfficialSection"></a>
 ###删除官方栏目
 #### POST  /officialColumn/del
 
 ######入参：
 			   *id			  String 栏目ID
-			   
+
 ######出参：
 	"result":
 		{
 		   "operation": 1
 		}
-		
+
 <a name="specialAuthorList"></a>		
 ###专栏作者列表
 #### POST  /specialColumn/lists
@@ -1406,7 +1452,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   nickname			String 用户名
 			   sort				Int 0:文章数, 1:订阅数, 2:浏览数, 3:创建时间, 4:文章更新时间, 降序
 			   page				Int 分页
-			   
+
 ######出参：
 	"result":
 		{
@@ -1438,7 +1484,7 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /specialColumn/set
 
 ######入参：
-			 
+
 			   *id			  Strinf ID
 			   *desc		  String 介绍
 			   *coverUrl	  String 封面
@@ -1447,7 +1493,7 @@ API地址: https://github.com/shiningwhite/m73_api
 				qq			  Int qq号码
 				weixin		  String 微信
 				remark		  String 备注
-			   
+
 ######出参：
 	"result":
 		{
@@ -1475,15 +1521,15 @@ API地址: https://github.com/shiningwhite/m73_api
 #### POST  /specialColumn/del
 
 ######入参：
-			 
+
 			   *id			 String ID
-			   
+
 ######出参：
 	"result":
 		{
 		  "operation": 1
 		}
-		
+
 <a name="articleList"></a>
 ###文章列表
 #### GET  /article/lists
@@ -1497,7 +1543,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   title			  String 标题
 			   officialColumn	  String 官方栏目
 			   spColumn			  String 专栏作者
-			   
+
 ######出参：
 	"result":
 		{
@@ -1519,7 +1565,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		  ],
 		  "pageTotal": "数量"
 		}
-		
+
 <a name="articleDetail"></a>
 ###文章详情
 #### GET  /article/detail
@@ -1632,7 +1678,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			 *name	   //  用户名
-			 
+
 ######出参:
 	 "result":
 		{
@@ -1647,7 +1693,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			}
 		  ]
 		}
-		
+
 <a name="wxArticleList"></a>
 ###微信文章列表
 #### GET  /wxarticle/lists
@@ -1655,7 +1701,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 		title			  String  标题
 		sort			 Int //排序降序  7:引用次数 
-			   
+
 ######出参:
 	 "result":
 		{
@@ -1679,7 +1725,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			wxId		  String ID // 微信文章ID
-			   
+
 ######出参:
 	"result":
 		{
@@ -1700,13 +1746,13 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			*id		  String ID  
-			   
+
 ######出参:
 	 "result":
 		{
 		  "operation": 1
 		}
-		
+
 <a name="dailyList"></a>
 ###每日文章推荐列表
 #### POST  /daily/lists
@@ -1716,7 +1762,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   title			String 标题
 			   sort				Int 0:文章数, 1:订阅数, 2:浏览数, 3:创建时间, 4:文章更新时间, 降序
 			   page				Int 分页
-			   
+
 ######出参：
 	"result":
 		{
@@ -1738,7 +1784,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		  ],
 		  "pageTotal": "数量"
 		}
-		
+
 <a name="setDaily"></a>
 ###编辑每日文章推荐
 #### POST  /daily/set
@@ -1748,7 +1794,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   *time				  String  推荐日期
 			   *articleId			  String  推荐文章ID
 			   *rank				  Int  排序
-		 
+
 ######出参：
 	"result":
 		{
@@ -1766,7 +1812,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "updateTime": "更新时间"
 			}
 		}
-		
+
 <a name="addDaily"></a>
 ###新增每日文章推荐
 #### POST  /daily/set
@@ -1775,7 +1821,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   *time				   String  推荐日期
 			   *articleId			   String  推荐文章ID
 			   *rank				   Int  排序
-		 
+
 ######出参：
 	"result":
 		{
@@ -1793,7 +1839,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  "updateTime": "更新时间"
 			}
 		}
-		
+
 <a name="addDailyStatus"></a>
 ###新增每日文章推荐状态修改
 #### POST  /daily/status
@@ -1802,13 +1848,13 @@ API地址: https://github.com/shiningwhite/m73_api
 
 			   *articleId			   String  推荐文章ID
 
-		 
+​		 
 ######出参：
 	"result":
 		{
 		   "operation": 1
 		}
-		
+
 <a name="regUserList"></a>
 ###用户列表
 #### GET  /regUser/lists
@@ -1819,7 +1865,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   status			  Int 状态
 			   role				  Int 身份
 			   nickname			  String 昵称
-			   
+
 ######出参：
 	"result":
 		{
@@ -1852,7 +1898,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		  ],
 		  "pageTotal": "数量"
 		}
-		
+
 <a name="regUserAdd"></a>
 ###新增用户
 #### GET  /regUser/set
@@ -1864,14 +1910,14 @@ API地址: https://github.com/shiningwhite/m73_api
 			  *nickname		String  昵称	
 			  role			Array	 角色ID
 			  avatarUrl		String  头像相对路径
-			  
-			   
+
+
 ######出参：
 	"result":
 		{
 		  "operation": 1
 		}
-		
+
 <a name="regUserSet"></a>
 ###编辑用户
 #### GET  /regUser/set
@@ -1882,21 +1928,21 @@ API地址: https://github.com/shiningwhite/m73_api
 			  role			Array	 角色ID
 			  avatarUrl		String  头像相对路径
 			  status   		Int 0:停用 1：启用
-			   
+
 ######出参：
 	"result":
 		{
 		  "operation": 1
 		}
-		
-		
+
+
 <a name="feedbackList"></a>
 ###反馈列表
 #### GET  /feedback/lists
 
 ######入参：
 			 page			Int 分页
-			 
+
 ######出参：
 	"result":
 		{
@@ -1915,7 +1961,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		  ],
 		  "pageTotal": "数量"
 		}
-		
+
 <a name="feedbackSet"></a>
 ###反馈备注
 #### GET  /feedback/set
@@ -1923,13 +1969,13 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
  			   *id				Int ID
 			   	remark			String 备注
-			   
+
 ######出参：
 	"result":
 		{
 		  "operation": 1
 		}
-		
+
 <a name="playList"></a>
 ###玩法列表
 #### GET  /play/lists
@@ -1940,7 +1986,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   status			  Int 状态 0:待审核，1:其他
 			   title			  String 玩法标题
 			   activityTitle	  String 活动标题
-			   
+
 ######出参：
 	"result":
 		{
@@ -1964,7 +2010,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		  ],
 		  "pageTotal": "数量"
 		}
-		
+
 <a name="playSet"></a>
 ###玩法编辑
 #### GET  /play/set
@@ -1974,7 +2020,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  status		Int  通过／拒绝
 			  isRecommend	Int  是否推荐
 			  isReview		Int  是否重审
-			   
+
 ######出参：
 	"result":
 		{
@@ -1988,7 +2034,7 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			   page				Int 分页
 		   	   status			int 0:待审核，1:其他  
-			   
+
 ######出参：
 	"result":
 		{
@@ -2006,7 +2052,7 @@ API地址: https://github.com/shiningwhite/m73_api
 		  ],
 		  "pageTotal": "数量"
 		}
-		
+
 <a name="playCommentSet"></a>
 ###玩法评论编辑
 #### GET  /playComment/set
@@ -2014,13 +2060,13 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			 *id			Int	 玩法ID
 			  status		Int 通过／拒绝
-			   
+
 ######出参：
 	"result":
 		{
 		  "operation": 1
 		}		
-		
+
 <a name="activityList"></a>
 ###活动列表
 #### GET  /activity/lists
@@ -2029,7 +2075,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			   page				Int 分页
 			   status			Int -1:全部 0:停用 1:启用
 			   sort				Int 2:浏览数 18:参与数  19:开始时间 20:截止时间
-			   
+
 ######出参：
 	"result":
 		{
@@ -2058,7 +2104,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			   id				Int ID // id为空为新增
-			   
+
 ######出参：
 	"result":
 		{
@@ -2088,7 +2134,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			  ]
 		  }
 		}		
-		
+
 <a name="activityAdd"></a>
 ###新增活动
 #### GET  /activity/set
@@ -2107,10 +2153,10 @@ API地址: https://github.com/shiningwhite/m73_api
 			  lotteryUrl	String 中奖地址
 			  descUrl		String 活动详情地址
 			  lotteryCount	String 中奖人数
-			   
+
 ######出参：
 
-		
+
 <a name="activitySet"></a>
 ###编辑活动
 #### GET  /activity/set
@@ -2131,10 +2177,232 @@ API地址: https://github.com/shiningwhite/m73_api
 			  lotteryUrl	String 中奖地址
 			  descUrl		String 活动详情地址
 			  lotteryCount	String 中奖人数
-			   
+
 ######出参：
 	"result":
 		{
 		  "operation": 1
 		}				
-		
+
+<a name="guideSeasonList"></a>
+
+### 当季小众推荐列表
+
+#### GET  /guide/season_resommend_list
+
+######入参：
+			   page				Int 分页
+			   month			Int 月份
+			   season			Int 季节
+
+######出参：
+
+```javascript
+"result":
+	{
+	  "list": [
+		{
+		  "id": ID,
+		  "coverDomain": "封面domain",
+		  "coverUrl": "封面地址"
+		  "desc": "描述",
+		  "season": "季节",
+		  "month": "月份",
+		  "addTime": "添加时间",
+          "site": "目的地"
+		 },
+		{ ... }			
+	  ],
+	  "pageTotal": "数量"
+	}
+```
+
+<a name="guideSeasonSet"></a>
+
+### 当季小众推荐编辑/新增
+
+#### POST /guide/season_resommend_edit
+
+######入参：
+			 *id			Int	 ID  // 新增不是必填
+			 *site          String 目的地
+			 *season		Array 季节
+			 *month         Array 月份
+			 *desc          String 描述
+			  cover	        String 目的地封面  // size>=600X400
+
+######出参：
+
+```javascript
+"result":
+	{
+	 	"operation": 1
+	}
+```
+<a name="guideSeasonDetail"></a>
+
+### 当季小众推荐详情
+
+#### GET /guide/season_resommend_detail
+
+######入参：
+			 *id			Int	 ID
+
+######出参：
+
+```javascript
+"result":
+	{
+	 	"info": {
+          	"site": "",
+            "desc": "",
+            "coverUrl":"",
+            "coverDomain": "",
+            "season": [{
+              "id": 1,
+              "text": "春季",
+              "checked": true
+            }, {
+              "id": 2,
+              "text": "夏季",
+              "checked": false   // 默认false 表示未选中
+            }, { ... }],
+            "month": [{
+              "id": 1,
+              "text": "1月",
+              "checked": true
+            }, {
+              "id": 2,
+              "text": "2月",
+              "checked": false   // 默认false 表示未选中
+            }, { ... }]  
+	 	}
+	}
+```
+<a name="delSeason"></a>
+
+### 当季小众推荐删除
+
+#### POST /guide/season_resommend_del
+
+######入参：
+			 *id			Int	 ID
+
+######出参：
+
+```javascript
+"result":
+	{
+	 	"operation": 1
+	}
+```
+<a name="guideCityList"></a>
+
+### 攻略首页分类列表
+#### GET  /guide/city_list
+
+######入参：
+			   page				Int 分页
+
+######出参：
+
+```javascript
+"result":
+	{
+	  "list": [
+		{
+		  "id": "ID,
+		  "area": "区域",
+		  "site": "目的地名称"
+		  "desc": "区域描述",
+		  "addTime": "添加时间"
+		 },
+		{ ... }			
+	  ],
+	  "pageTotal": "数量"
+	}
+```
+
+<a name="guideCitySet"></a>
+
+### 攻略首页分类编辑/新增
+#### post  /guide/city_edit
+
+######入参：
+			*id     Int   ID   // 新增不是必填
+			 area   String  区域名称
+			 desc   String  区域描述
+			 site   Array   目的地
+
+######出参：
+
+```javascript
+"result":
+	{
+	  "oeration": 1
+	}
+```
+
+<a name="guideCityDetail"></a>
+
+### 攻略首页分类详情
+#### GET  /guide/city_detail
+
+######入参：
+			   *id			Int ID	
+
+######出参：
+
+```javascript
+"result":
+	{
+	  "info": {
+		  "id": ID,
+		  "area": "区域",
+		  "site": [{
+            "id": 1,
+            "text": "杭州",
+            "coverUrl": "图片封面地址",
+            "coverDomain": "封面域名"
+		  }, { ... }]，
+		  "desc": "区域描述",
+		  "addTime": "添加时间"
+		 }	
+	}
+```
+
+<a name="delCity"></a>
+
+### 攻略首页分类删除
+#### POST  /guide/city_del
+
+######入参：
+			   *id			Int ID	
+######出参：
+
+```javascript
+"result":
+	{
+	  "operation": 1
+	}
+```
+<a name="guideCitySearch"></a>
+
+### 攻略目的地搜索
+#### POST  /guide/site_search
+
+######入参：
+			  *text			String 关键字
+######出参：
+
+```javascript
+"result":
+	{
+		"list": [{
+            "id": 1,
+            "text": "杭州",
+            "coverUrl": "图片封面地址",
+            "coverDomain": "封面域名"
+		  }, { ... }]，
+	}
+```
