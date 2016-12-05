@@ -2188,7 +2188,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ### 当季小众推荐列表
 
-#### GET  /guide_season/list
+#### GET  /guide_season/lists
 
 ######入参：
 			   page				Int 分页
@@ -2299,7 +2299,7 @@ API地址: https://github.com/shiningwhite/m73_api
 <a name="guideCityList"></a>
 
 ### 攻略首页分类列表
-#### GET  /guide_city/list
+#### GET  /guide_city/lists
 
 ######入参：
 			   page				Int 分页
