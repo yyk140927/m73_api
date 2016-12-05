@@ -2229,6 +2229,7 @@ API地址: https://github.com/shiningwhite/m73_api
 			 *season		Array 季节
 			 *month         Array 月份
 			 *desc          String 描述
+			 *url           String 推荐地址URL
 			  cover	        String 目的地封面  // size>=600X400
 
 ######出参：
