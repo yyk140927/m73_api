@@ -125,6 +125,8 @@ API地址: https://github.com/shiningwhite/m73_api
        - [攻略首页分类详情](#guideCityDetail)
        - [攻略首页分类删除](#delCity)
        - [攻略目的地搜索](#guideCitySearch)
+       - [攻略目的地热门搜索关键词](#guideCityHotSearch)
+       - [攻略目的地热门搜索关键词编辑](#guideCityHotSearchEdit)
 
 <a name="description"></a>
 
@@ -2405,5 +2407,44 @@ API地址: https://github.com/shiningwhite/m73_api
             "coverUrl": "图片封面地址",
             "coverDomain": "封面域名"
 		  }, { ... }]，
+	}
+```
+<a name="guideCityHotSearch"></a>
+
+### 攻略目的地热门搜索关键词
+#### POST  /guide_search/lists
+
+######入参：
+######出参：
+
+```javascript
+"result":
+	{
+		"list": [{
+            "id": 1,  //  分组ID
+          	"keyword": [{
+              "text": "杭州",
+              "veiwCount": "访问量"
+              },
+              { ... }
+          	],
+          	"time": "创建时间"
+		  }, { ... }]
+	}
+```
+<a name="guideCityHotSearchEdit"></a>
+
+### 攻略目的地热门搜索关键词编辑
+#### POST  /guide_search/set
+
+######入参：
+			  *groupId           Int   分组ID
+	           keyword           Array 关键字
+######出参：
+
+```javascript
+"result":
+	{
+		"operation": 1
 	}
 ```
