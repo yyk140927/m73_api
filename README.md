@@ -2425,7 +2425,7 @@ API地址: https://github.com/shiningwhite/m73_api
             "id": 1,  //  分组ID
           	"keyword": [{
               "text": "杭州",
-              "veiwCount": "访问量"
+              "viewCount": "访问量"
               },
               { ... }
           	],
