@@ -2393,6 +2393,23 @@ API地址: https://github.com/shiningwhite/m73_api
 	  "operation": 1
 	}
 ```
+<a name="citySort"></a>
+
+### 攻略首页分类排序
+#### POST  /guide_city/sort
+
+######入参：
+######出参：
+
+```javascript
+"result":
+	{
+	  "sort": [{
+        "id": 1,
+        "rank": 2   // 位置
+	  }, { ... }]
+	}
+```
 <a name="guideCitySearch"></a>
 
 ### 攻略目的地搜索
