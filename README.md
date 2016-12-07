@@ -2334,6 +2334,7 @@ API地址: https://github.com/shiningwhite/m73_api
 
 ######入参：
 			*id     Int   ID   // 新增不是必填
+			*layout Int   前台展示风格 三栏：3，六栏：6
 			 area   String  区域名称
 			 desc   String  区域描述
 			 site   Array   目的地
@@ -2370,7 +2371,8 @@ API地址: https://github.com/shiningwhite/m73_api
             "coverDomain": "封面域名"
 		  }, { ... }]，
 		  "desc": "区域描述",
-		  "addTime": "添加时间"
+		  "addTime": "添加时间",
+          "layout": 3  //  前台展示风格 三栏：3，六栏：6
 		 }	
 	}
 ```
