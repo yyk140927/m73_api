@@ -2319,7 +2319,8 @@ API地址: https://github.com/shiningwhite/m73_api
 		  "area": "区域",
 		  "site": "目的地名称"
 		  "desc": "区域描述",
-		  "addTime": "添加时间"
+		  "addTime": "添加时间",
+          "layout": 3  //  前台展示风格 三栏：3，六栏：6
 		 },
 		{ ... }			
 	  ],
