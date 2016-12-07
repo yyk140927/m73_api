@@ -124,6 +124,7 @@ API地址: https://github.com/shiningwhite/m73_api
        - [攻略首页分类编辑/新增](#guideCitySet)
        - [攻略首页分类详情](#guideCityDetail)
        - [攻略首页分类删除](#delCity)
+       - [攻略首页分类排序](#citySort)
        - [攻略目的地搜索](#guideCitySearch)
        - [攻略目的地热门搜索关键词](#guideCityHotSearch)
        - [攻略目的地热门搜索关键词编辑](#guideCityHotSearchEdit)
