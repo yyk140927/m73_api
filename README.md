@@ -2487,7 +2487,7 @@ API地址: https://github.com/shiningwhite/m73_api
 "result":
 	{
 		"list": [{
-            "id": 1,  //  分组ID
+            "id": 1,  //  要回复的ID
           	"nickname":"用户昵称" ,
           	"content":"消息内容",
           	"replyStat":"已回复",
