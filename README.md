@@ -128,6 +128,10 @@ API地址: https://github.com/shiningwhite/m73_api
        - [攻略目的地搜索](#guideCitySearch)
        - [攻略目的地热门搜索关键词](#guideCityHotSearch)
        - [攻略目的地热门搜索关键词编辑](#guideCityHotSearchEdit)
+    +  微信管理
+       - [微信回复列表](#wechatReplyList)
+       - [微信回复设置](#wechatReplySet)
+       - [微信回复历史](#wechatReplyHistory)
 
 <a name="description"></a>
 
@@ -2462,6 +2466,62 @@ API地址: https://github.com/shiningwhite/m73_api
 ######入参：
 			  *groupId           Int   分组ID
 	           keyword           Array 关键字
+######出参：
+
+```javascript
+"result":
+	{
+		"operation": 1
+	}
+```
+<a name="wechatReplyList"></a>
+
+### 微信回复列表
+#### POST  /wechat_reply/lists
+
+######入参：
+    content        String 搜索内容
+######出参：
+
+```javascript
+"result":
+	{
+		"list": [{
+            "id": 1,  //  分组ID
+          	"nickname":"用户昵称" ,
+          	"content":"消息内容",
+          	"replyStat":"已回复",
+          	"replyName":"回复人",
+          	"time": "创建时间"
+		  }, { ... }]
+	}
+```
+<a name="wechatReplyHistory"></a>
+
+### 微信回复用户历史信息列表
+#### POST  /wechat_reply/history
+
+######入参：
+######出参：
+
+```javascript
+"result":
+	{
+		"list": [{
+          	"nickname":"用户昵称" ,
+          	"content":"消息内容",
+          	"time": "创建时间"
+		  }, { ... }]
+	}
+```
+<a name="wechatReplySet"></a>
+
+### 向微信用户回复
+#### POST  /wechat_reply/set
+
+######入参：
+			  *id                Int    回复的id
+	          content            String 回复内容
 ######出参：
 
 ```javascript
