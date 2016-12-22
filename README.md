@@ -2493,7 +2493,8 @@ API地址: https://github.com/shiningwhite/m73_api
           	"replyStat":"已回复",
           	"replyName":"回复人",
           	"time": "创建时间"
-		  }, { ... }]
+		  }, { ... }],
+  	    "pageTotal": "数量"
 	}
 ```
 <a name="wechatReplyHistory"></a>
